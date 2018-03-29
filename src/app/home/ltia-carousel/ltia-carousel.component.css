@@ -1,0 +1,80 @@
+@media only screen and (max-width: 768px) {
+    div.carousel-text {
+        top: 30%;
+        left: 30%;
+        font-size: 60px;
+    }
+
+    .carousel-text > span{
+        position: relative;
+        left: 0%;
+    }
+
+    div.carousel-bullet{
+        border-radius: 12px;
+        width: 12px;
+        height: 12px;
+        background: white;
+        margin: 4px;
+    }
+}
+
+.carousel-text{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    background: rgba(0, 0, 0, 0);
+    font-size: 66px;
+    color: white;
+}
+
+.carousel-text > span{
+    position: relative;
+    left: -50%;
+}
+
+.carousel-bullets{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: -50%;
+}
+
+.carousel-bullets-container{
+    position: absolute;
+    left: 50%;
+    top: 82%;
+}
+
+.carousel-bullet{
+    border-radius: 12px;
+    width: 18px;
+    height: 18px;
+    background: white;
+    margin: 8px;
+}
+
+.carousel-bullet.active{
+    background: orange;
+}
+
+.carousel-right-arrow{
+    position: fixed;
+    right: 0;
+    width: 15%;
+    height: 100%;
+}
+
+.carousel-main{
+    position: fixed;
+    display: flex;
+    height: 100%;
+    z-index: -2;
+}
+
+.carousel-item{
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}

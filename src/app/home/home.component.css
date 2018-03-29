@@ -1,0 +1,30 @@
+@media only screen and (max-width: 768px) {
+    .lateral-bar {
+        display: none;
+    }
+}
+
+.lateral-bar {
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    background: rgba(30, 54, 59, 0.9);
+    width: 20%;
+    color: white;
+    z-index: -1;
+    padding-top: 220px;
+}
+
+.lateral-bar ul {
+    width: 100%;
+    list-style: none;
+    padding-left: 5%;
+}
+
+.lateral-bar ul li {
+    margin-bottom: 12%;
+    margin-right: 10%;
+    padding-left: 10%;
+    font-size: 26px;
+    border-bottom: rgba(22, 41, 45, 0.9) solid 2px;
+}

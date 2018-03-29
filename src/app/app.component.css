@@ -1,0 +1,51 @@
+@media only screen and (max-width: 768px){
+    .tiny-bar{
+        display: none;
+    }
+
+    .upper-bar > p{
+        display: none;
+    }
+
+    div.upper-bar > img {
+        display: block;
+        margin: 0 auto;
+        float: none;
+    }
+}
+
+.upper-bar {
+    height: 80px;
+    width: 100%;
+    background-color: #1A1A1A;
+    display: flex;
+    align-items: center;
+}
+
+
+.upper-bar > img {
+    margin-top: 5px;
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.upper-bar > p{
+    color: white;
+    margin: 0;
+    font-size: 22px;
+}
+
+.tiny-bar{
+    width: 4px;
+    height: 40px;
+    margin-right: 20px;
+    background: #737373;
+    vertical-align: middle;
+}
+
+ltia-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
