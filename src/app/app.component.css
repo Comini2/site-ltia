@@ -15,7 +15,7 @@
 }
 
 .upper-bar {
-    height: 80px;
+    height: 60px;
     width: 100%;
     background-color: #1A1A1A;
     display: flex;
@@ -33,7 +33,7 @@
 .upper-bar > p{
     color: white;
     margin: 0;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .tiny-bar{
