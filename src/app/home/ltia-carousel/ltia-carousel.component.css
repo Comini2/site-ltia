@@ -1,8 +1,8 @@
 @media only screen and (max-width: 768px) {
     div.carousel-text {
-        top: 30%;
-        left: 40%;
-        font-size: 44px;
+        top: 70%;
+        font-size: 36px;
+        white-space: normal;
     }
 
     .carousel-text > span{
@@ -21,14 +21,15 @@
 
 .carousel-text{
     position: absolute;
-    left: 50%;
     top: 70%;
     background: rgba(0, 0, 0, 0);
     font-size: 54px;
     color: white;
+    text-align: center;
+    left: 50%;
 }
 
-.carousel-text > span{
+.carousel-text > span {
     position: relative;
     left: -50%;
 }
@@ -63,6 +64,7 @@
     right: 0;
     width: 15%;
     height: 100%;
+    cursor: pointer;
 }
 
 .carousel-main{
@@ -77,4 +79,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+}
+
+ltia-carousel {
+    white-space: nowrap;
 }

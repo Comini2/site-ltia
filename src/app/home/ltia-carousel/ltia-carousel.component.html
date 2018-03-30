@@ -1,11 +1,13 @@
-<div class="carousel-main" #carousel [style.width.%]="totalSize">
-  <div class="carousel-item" *ngFor ="let path of paths; let i = index;" [style.width.%]= "eachSize" [style.backgroundImage]="'url('+path+')'"></div>
-</div>
+<div [@next]="currentIndex" (@next.done)="animationDone($event)" (@next.start)="animationStart($event)">
+  <div class="carousel-main" [style.width.%]="totalSize">
+    <div class="carousel-item" *ngFor ="let item of items | orderBy: order" [style.width.%]= "eachSize" [style.backgroundImage]="'url('+item.path+')'"></div>
+  </div>
   <div class="carousel-right-arrow" (click)="showNext()"></div>
 
   <div class="carousel-text"><span>{{currentText}}</span></div>
   <div class="carousel-bullets-container">
       <div class="carousel-bullets">
-        <div *ngFor = "let path of paths; let i = index" [class.active]="i === currentIndex" class="carousel-bullet"></div>
+        <div *ngFor = "let item of items; let i = index" [class.active]="i === currentIndex" class="carousel-bullet"></div>
       </div>
   </div>
+</div>

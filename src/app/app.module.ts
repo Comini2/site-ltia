@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LtiaCarouselComponent } from './home/ltia-carousel/ltia-carousel.component';
+import { OrderModule } from 'ngx-order-pipe';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { LtiaCarouselComponent } from './home/ltia-carousel/ltia-carousel.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
