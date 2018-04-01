@@ -38,11 +38,13 @@
 }
 
 .carousel-right-arrow{
+    background-position: 0 -30px;
     position: fixed;
     right: 0;
     width: 20%;
     height: 100%;
     cursor: pointer;
+    transition: background-position 1s ease-in;
 }
 
 .carousel-left-arrow{
@@ -51,6 +53,14 @@
     width: 20%;
     height: 100%;
     cursor: pointer;
+}
+
+.carousel-right-arrow:hover{
+    background: linear-gradient(to right, rgba(255,  255, 255, 0), rgba(30, 54, 59, 0.9));
+}
+
+.carousel-left-arrow:hover{
+    background: linear-gradient(to left, rgba(255,  255, 255, 0), rgba(30, 54, 59, 0.9));
 }
 
 .carousel-main{
