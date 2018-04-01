@@ -1,15 +1,4 @@
 @media only screen and (max-width: 768px) {
-    div.carousel-text {
-        top: 70%;
-        font-size: 36px;
-        white-space: normal;
-    }
-
-    .carousel-text > span{
-        position: inherit;
-        left: 0%;
-    }
-
     div.carousel-bullet{
         border-radius: 12px;
         width: 12px;
@@ -17,21 +6,10 @@
         background: white;
         margin: 4px;
     }
-}
 
-.carousel-text{
-    position: absolute;
-    top: 70%;
-    background: rgba(0, 0, 0, 0);
-    font-size: 54px;
-    color: white;
-    text-align: center;
-    left: 50%;
-}
-
-.carousel-text > span {
-    position: relative;
-    left: -50%;
+    div.carousel-left-arrow{
+        left: 0;
+    }
 }
 
 .carousel-bullets{
@@ -62,25 +40,24 @@
 .carousel-right-arrow{
     position: fixed;
     right: 0;
-    width: 15%;
+    width: 20%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.carousel-left-arrow{
+    position: fixed;
+    left: 250px;
+    width: 20%;
     height: 100%;
     cursor: pointer;
 }
 
 .carousel-main{
+    top: 0;
     position: fixed;
     display: flex;
     height: 100%;
     z-index: -2;
 }
 
-.carousel-item{
-    display: block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
-ltia-carousel {
-    white-space: nowrap;
-}

@@ -1,13 +1,10 @@
-<div [@next]="currentIndex" (@next.done)="animationDone($event)" (@next.start)="animationStart($event)">
-  <div class="carousel-main" [style.width.%]="totalSize">
-    <div class="carousel-item" *ngFor ="let item of items | orderBy: order" [style.width.%]= "eachSize" [style.backgroundImage]="'url('+item.path+')'"></div>
-  </div>
-  <div class="carousel-right-arrow" (click)="showNext()"></div>
-
-  <div class="carousel-text"><span>{{currentText}}</span></div>
-  <div class="carousel-bullets-container">
-      <div class="carousel-bullets">
-        <div *ngFor = "let item of items; let i = index" [class.active]="i === currentIndex" class="carousel-bullet"></div>
-      </div>
-  </div>
+<div #main class="carousel-main" [style.width.%]="totalSize">
+  <ng-content></ng-content>
+</div>
+<div class="carousel-right-arrow" (click)="showNext()"></div>
+<div class="carousel-left-arrow" (click)="showPrev()"></div>
+<div class="carousel-bullets-container">
+    <div class="carousel-bullets">
+      <div *ngFor = "let item of items; let i = index" [class.active]="i === currentIndex" class="carousel-bullet"></div>
+    </div>
 </div>

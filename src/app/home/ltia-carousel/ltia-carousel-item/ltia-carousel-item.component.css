@@ -1,0 +1,32 @@
+@media only screen and (max-width: 768px) {
+    div.carousel-text {
+        font-size: 36px;
+        line-height: 36px;
+        top: 75%;
+    }
+}
+
+.carousel-item{
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+}
+
+.carousel-text{
+    position: absolute;
+    top: 70%;
+    background: rgba(0, 0, 0, 0);
+    font-size: 54px;
+    color: white;
+    text-align: center;
+    left: 50%;
+    white-space: nowrap;
+}
+
+.carousel-text > span {
+    position: relative;
+    left: -50%;
+}

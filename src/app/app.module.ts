@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LtiaCarouselComponent } from './home/ltia-carousel/ltia-carousel.component';
 import { OrderModule } from 'ngx-order-pipe';
+import { LtiaCarouselItemComponent } from './home/ltia-carousel/ltia-carousel-item/ltia-carousel-item.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LtiaCarouselComponent
+    LtiaCarouselComponent,
+    LtiaCarouselItemComponent
   ],
   imports: [
     BrowserModule,
