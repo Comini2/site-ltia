@@ -9,6 +9,7 @@ import { LtiaCarouselComponent } from './home/ltia-carousel/ltia-carousel.compon
 import { OrderModule } from 'ngx-order-pipe';
 import { LtiaCarouselItemComponent } from './home/ltia-carousel/ltia-carousel-item/ltia-carousel-item.component';
 import { MenuComponent } from './menu/menu.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MenuComponent } from './menu/menu.component';
     HomeComponent,
     LtiaCarouselComponent,
     LtiaCarouselItemComponent,
-    MenuComponent
+    MenuComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
