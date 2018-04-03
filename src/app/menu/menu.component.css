@@ -1,0 +1,133 @@
+@media only screen and (max-width: 768px) {
+    .lateral-bar {
+        left: -250px;
+    }
+
+    .tiny-bar{
+        display: none;
+    }
+
+    .upper-bar > p{
+        display: none;
+    }
+
+    div.img-container > img {
+        position: relative;
+        left: -50%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    div.img-container {
+        position: absolute;
+        left: 50%;
+    }
+
+    label.menu-button {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    div.menu-text {
+        display: none;
+    }
+
+    div.menu-stripes{
+        margin: 0;
+    }
+}
+
+/********** MENU RESPONSIVO ***********/
+
+input#menu{
+    display: none;
+}
+
+input#menu:checked ~ .lateral-bar{
+    left: 0px;
+}
+
+.menu-stripes {
+    margin-right: 10px;
+    width: 24px;
+}
+
+.menu-button {
+    position: absolute;
+    top: 0px;
+    display: none;
+    width: 15%;
+    height: 60px;
+    padding: 10px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(23, 42, 45, 0.75);
+}
+
+.white-stripe{
+    height: 2px;
+    background-color: white;
+    margin-bottom: 6px;
+}
+
+/***************** BARRA LATERAL ********************/
+
+.lateral-bar {
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    background: rgba(30, 54, 59, 0.9);
+    width: 250px;
+    color: white;
+    z-index: -1;
+    padding-top: 130px;
+    transition: left 0.15s ease-in-out;
+}
+
+.lateral-bar ul {
+    width: 100%;
+    list-style: none;
+    padding-left: 5%;
+}
+
+.lateral-bar ul li {
+    margin-bottom: 30px;
+    margin-right: 10%;
+    padding-left: 10%;
+    font-size: 22px;
+}
+
+/**************** BARRA SUPERIOR *****************/ 
+
+.upper-bar {
+    height: 60px;
+    width: 100%;
+    background-color: #1A1A1A;
+    display: flex;
+    align-items: center;
+}
+
+
+.img-container > img {
+    margin-top: 5px;
+    height: 60px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.upper-bar > p{
+    color: white;
+    margin: 0;
+    font-size: 18px;
+}
+
+.tiny-bar{
+    width: 4px;
+    height: 40px;
+    margin-right: 20px;
+    background: #737373;
+    vertical-align: middle;
+}
