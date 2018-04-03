@@ -17,6 +17,7 @@ export class LtiaCarouselComponent implements AfterViewInit {
   totalSize: number;
   currentIndex: number = 0;
   private player : AnimationPlayer;
+  timeout: any;
 
   constructor(private cdRef:ChangeDetectorRef, private builder: AnimationBuilder) { }
 
@@ -29,10 +30,17 @@ export class LtiaCarouselComponent implements AfterViewInit {
     item.detectChange();
    });
    this.cdRef.detectChanges();
+   this.timeout = setTimeout(() => {
+     this.showNext();
+   }, 5000);
   }
 
   showNext(){
-    if(this.currentIndex === this.items.length - 1) return;
+    if(this.currentIndex === this.items.length - 1) {
+      this.setPrevTimeOut();
+      return;
+    }
+    this.setNextTimeOut();
 
     this.currentIndex++;
     const offset = this.currentIndex*this.slideSize;
@@ -46,7 +54,12 @@ export class LtiaCarouselComponent implements AfterViewInit {
   }
 
   showPrev(){
-    if(this.currentIndex === 0) return; 
+    if(this.currentIndex === 0) {
+      this.setNextTimeOut();
+      return;
+    }
+
+    this.setPrevTimeOut();
     
     this.currentIndex--;
 
@@ -59,5 +72,18 @@ export class LtiaCarouselComponent implements AfterViewInit {
     this.player = animation.create(this.carousel.nativeElement);
     this.player.play();
   }
+  
+  setNextTimeOut(){
+     clearTimeout(this.timeout);
+      this.timeout = setTimeout(() => {
+        this.showNext();
+      }, 5000);
+  }
 
+  setPrevTimeOut(){
+    clearTimeout(this.timeout);
+      this.timeout = setTimeout(() => {
+        this.showPrev();
+      }, 5000);
+  }
 }
