@@ -25,6 +25,11 @@
     label.menu-button {
         display: flex;
     }
+
+    label[for="menu"].menu-button-pages {
+        top: 0px;
+        width:15%;
+    }
 }
 
 @media only screen and (max-width: 590px) {
@@ -38,6 +43,12 @@
 }
 
 /********** MENU RESPONSIVO ***********/
+
+label.menu-button-pages {
+    display: flex;
+    top: 60px;
+    width: 250px;
+}
 
 input#menu{
     display: none;
@@ -74,6 +85,10 @@ input#menu:checked ~ .lateral-bar{
 }
 
 /***************** BARRA LATERAL ********************/
+
+.lateral-bar-pages {
+    left: -250px;
+}
 
 .lateral-bar {
     position: absolute;
