@@ -64,8 +64,8 @@ input#menu:checked ~ .lateral-bar{
 }
 
 .menu-button {
-    position: absolute;
-    top: 0px;
+    position: fixed;
+    top: 0;
     display: none;
     width: 15%;
     height: 60px;
@@ -76,6 +76,8 @@ input#menu:checked ~ .lateral-bar{
     cursor: pointer;
     color: white;
     background-color: rgba(23, 42, 45, 0.75);
+    user-select: none;
+    z-index: 2;
 }
 
 .white-stripe{
@@ -91,15 +93,18 @@ input#menu:checked ~ .lateral-bar{
 }
 
 .lateral-bar {
-    position: absolute;
+    position: fixed;
     height: 100vh;
     top: 0px;
     background: rgba(30, 54, 59, 0.9);
     width: 250px;
     color: white;
-    z-index: -1;
+    z-index: 1;
     padding-top: 130px;
     transition: left 0.15s ease-in-out;
+    -o-transition: left 0.15s ease-in-out;
+    -moz-transition: left 0.15s ease-in-out;
+    -webkit-transition: left 0.15s ease-in-out;
 }
 
 .lateral-bar ul {
@@ -123,11 +128,14 @@ input#menu:checked ~ .lateral-bar{
 /**************** BARRA SUPERIOR *****************/ 
 
 .upper-bar {
+    position: fixed;
+    top: 0;
     height: 60px;
     width: 100%;
     background-color: #1A1A1A;
     display: flex;
     align-items: center;
+    z-index: 2;
 }
 
 
