@@ -4,7 +4,7 @@
   <p>LABORATÓRIO DE TECNOLOGIA DA INFORMAÇÃO APLICADA</p> 
 </div>
 
-<label class="menu-button" for="menu"> 
+<label [ngClass]="menuStyle" class="menu-button" for="menu"> 
   <div class="menu-stripes">
     <div class="white-stripe"></div> 
     <div class="white-stripe"></div> 
@@ -14,14 +14,8 @@
 </label>
 
 <input id="menu" type="checkbox">
-<div class="lateral-bar">
+<div class="lateral-bar" [ngClass]="barStyle">
   <ul>
-      <li><a>Sobre</a></li>
-      <li><a>LTIA no mundo</a></li>
-      <li><a>Projetos</a></li>
-      <li><a>Cursos</a></li>
-      <li><a>Equipe</a></li>
-      <li><a>Local</a></li>
-      <li><a>Contato</a></li>
+      <li *ngFor="let page of pages"><a [routerLink]="[page.path]">{{page.text}}</a></li>
   </ul>
 </div>
