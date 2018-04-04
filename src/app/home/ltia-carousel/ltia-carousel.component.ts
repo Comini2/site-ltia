@@ -1,6 +1,7 @@
 import { Component, AfterViewInit, AnimationPlayer, ViewChild, ElementRef, ContentChildren, QueryList, ChangeDetectorRef } from '@angular/core';
 import { trigger, group, style, transition, stagger, animate, keyframes, query, AnimationBuilder, AnimationFactory } from  '@angular/animations';
 import { LtiaCarouselItemComponent } from './ltia-carousel-item/ltia-carousel-item.component';
+import { Router, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'ltia-carousel',
@@ -19,7 +20,12 @@ export class LtiaCarouselComponent implements AfterViewInit {
   private player : AnimationPlayer;
   timeout: any;
 
-  constructor(private cdRef:ChangeDetectorRef, private builder: AnimationBuilder) { }
+  constructor(private cdRef:ChangeDetectorRef, private builder: AnimationBuilder, private router:Router) {
+    router.events.subscribe((val) =>{
+      if(val instanceof NavigationStart)
+        clearTimeout(this.timeout);
+    })
+   }
 
   ngAfterViewInit(){
    this.totalSize = this.items.length*100;
