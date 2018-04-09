@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ChangeDetectorRef, ElementRef, Input} from '@angular/core';
+import { Component, AfterViewInit, ChangeDetectorRef, ElementRef, Input, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'ltia-carousel-item',
@@ -8,17 +8,21 @@ import { Component, AfterViewInit, ChangeDetectorRef, ElementRef, Input} from '@
 
 export class LtiaCarouselItemComponent implements AfterViewInit {
 
+  preloadURL: string;
   public width: number;
   public left: number;
+  isLoaded = false;
+
+  public onLoad: () => void;
 
   @Input() imgSrc : string;
   @Input('itemText') text: string;
+  @ViewChild('item') item : ElementRef;
 
-  constructor(private cdRef:ChangeDetectorRef, private element: ElementRef) { }
+  constructor(private cdRef:ChangeDetectorRef) { }
 
   ngAfterViewInit() {
-    let elem = this.element.nativeElement.querySelector('.carousel-item');
-    elem.style.backgroundImage = "url("+this.imgSrc+")";
+
   }
 
   getStyle(){
@@ -26,7 +30,6 @@ export class LtiaCarouselItemComponent implements AfterViewInit {
       'width': this.width + '%',
       'left': this.left + '%'
     }
-
     return myStyle;
   }
 
@@ -34,4 +37,16 @@ export class LtiaCarouselItemComponent implements AfterViewInit {
     this.cdRef.detectChanges();
   }
 
+  public lazyLoad() {
+    if(!this.isLoaded){
+      this.preloadURL = this.imgSrc;
+      this.isLoaded = true;
+    }
+  }
+
+  loaded(){
+    this.item.nativeElement.style.backgroundImage = "url("+this.imgSrc+")";
+    if(this.onLoad != null)
+      this.onLoad();
+  }
 }

@@ -28,17 +28,25 @@ export class LtiaCarouselComponent implements AfterViewInit {
    }
 
   ngAfterViewInit(){
-   this.totalSize = this.items.length*100;
-   this.slideSize = 100/this.items.length;
-   this.items.forEach((item, i) => {
-    item.width = this.slideSize;
-    item.left = i*this.slideSize;
-    item.detectChange();
-   });
-   this.cdRef.detectChanges();
-   this.timeout = setTimeout(() => {
-     this.showNext();
-   }, 5000);
+    this.totalSize = this.items.length*100;
+    this.slideSize = 100/this.items.length;
+    this.items.forEach((item, i) => {
+      item.width = this.slideSize;
+      item.left = i*this.slideSize;
+      if(i === 0){
+        item.lazyLoad();
+        item.onLoad = () => this.setNextTimeOut();
+      }
+      item.detectChange();
+    });
+    this.cdRef.detectChanges();
+  }
+
+  load(index: number){
+    this.items.forEach((item, i) => {
+      if(i == index)
+        item.lazyLoad();
+    });
   }
 
   showNext(){
@@ -47,16 +55,10 @@ export class LtiaCarouselComponent implements AfterViewInit {
       return;
     }
     this.setNextTimeOut();
-
     this.currentIndex++;
     const offset = this.currentIndex*this.slideSize;
-  
-    const animation = this.builder.build([
-      animate("500ms ease-out", style({transform: `translateX(-${offset}%`}))
-    ]);
-
-    this.player = animation.create(this.carousel.nativeElement);
-    this.player.play();
+    this.animateItem(offset);
+    this.load(this.currentIndex);
   }
 
   showPrev(){
@@ -66,11 +68,12 @@ export class LtiaCarouselComponent implements AfterViewInit {
     }
 
     this.setPrevTimeOut();
-    
     this.currentIndex--;
-
     const offset = this.currentIndex*this.slideSize;
-  
+    this.animateItem(offset);
+  }
+
+  animateItem(offset : number){
     const animation = this.builder.build([
       animate("500ms ease-out", style({transform: `translateX(-${offset}%`}))
     ]);
