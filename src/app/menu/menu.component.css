@@ -140,9 +140,8 @@ input#menu:checked ~ .lateral-bar{
 
 
 .img-container > img {
-    margin-top: 5px;
-    height: 60px;
-    margin-left: 20px;
+    height: 45px;
+    margin-left: 10px;
     margin-right: 10px;
 }
 
