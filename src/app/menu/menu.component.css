@@ -1,7 +1,7 @@
 @media only screen and (max-width: 768px) {
-    .lateral-bar {
+    /*.lateral-bar {
         left: -250px;
-    }
+    }*/
 
     .tiny-bar{
         display: none;
@@ -54,9 +54,9 @@ input#menu{
     display: none;
 }
 
-input#menu:checked ~ .lateral-bar{
+/*input#menu:checked ~ .lateral-bar{
     left: 0px;
-}
+}*/
 
 .menu-stripes {
     margin-right: 10px;
@@ -88,9 +88,9 @@ input#menu:checked ~ .lateral-bar{
 
 /***************** BARRA LATERAL ********************/
 
-.lateral-bar-pages {
+/*.lateral-bar-pages {
     left: -250px;
-}
+}*/
 
 .lateral-bar {
     position: fixed;
@@ -101,10 +101,10 @@ input#menu:checked ~ .lateral-bar{
     color: white;
     z-index: 998;
     padding-top: 130px;
-    transition: left 0.15s ease-in-out;
+    /*transition: left 0.15s ease-in-out;
     -o-transition: left 0.15s ease-in-out;
     -moz-transition: left 0.15s ease-in-out;
-    -webkit-transition: left 0.15s ease-in-out;
+    -webkit-transition: left 0.15s ease-in-out;*/
 }
 
 .lateral-bar ul {
