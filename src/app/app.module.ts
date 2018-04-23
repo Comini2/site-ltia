@@ -11,6 +11,7 @@ import { LtiaCarouselItemComponent } from './home/ltia-carousel/ltia-carousel-it
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
+import { LocationComponent } from './location/location.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FooterComponent } from './footer/footer.component';
     LtiaCarouselItemComponent,
     MenuComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
