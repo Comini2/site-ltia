@@ -14,6 +14,10 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
+    path: 'ltia-no-mundo',
+    component: AboutComponent
+  },
+  {
     path: 'location',
     component: LocationComponent
   }
