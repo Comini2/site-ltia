@@ -1,13 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'ltia-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.css'],
+  animations: [
+    trigger('anim', [
+      state('true', style({
+        transform: 'translateX(0)'
+    })),
+      state('false', style({
+        transform: 'translateX(-250px)'
+    })),
+      transition('* => *', animate('150ms ease-in-out'))
+  ])]
 })
 export class MenuComponent implements OnInit {
+
+  check : boolean = true;
 
   menuHomeStyle = { 'menu-button-pages' : false }
 
@@ -25,7 +38,9 @@ export class MenuComponent implements OnInit {
     { path: '', text: 'LTIA no mundo' },
     { path: '', text: 'Projetos' },
     { path: '', text: 'Cursos' },
-    { path: '', text: 'Equipe' }
+    { path: '', text: 'Equipe' },
+    { path: 'location', text: 'Local'},
+    { path: '', text: 'Contato'}
   ]
 
   setPagesStyle(){
@@ -45,10 +60,18 @@ export class MenuComponent implements OnInit {
       this.setHomeStyle();
   }
 
+  changeState(){
+    this.check = !this.check;
+  }
+
   constructor(private location: Location, private router: Router) {
     router.events.subscribe((val) => {
-      if(val instanceof NavigationEnd)
+      if(val instanceof NavigationEnd){
         this.setStyle();
+        if(this.location.path() == "")
+          return;
+        this.check = false;
+      }
     });
    }
 

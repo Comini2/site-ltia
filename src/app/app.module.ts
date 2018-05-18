@@ -6,10 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LtiaCarouselComponent } from './home/ltia-carousel/ltia-carousel.component';
-import { OrderModule } from 'ngx-order-pipe';
 import { LtiaCarouselItemComponent } from './home/ltia-carousel/ltia-carousel-item/ltia-carousel-item.component';
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './footer/footer.component';
+import { LocationComponent } from './location/location.component';
 
 
 @NgModule({
@@ -19,13 +20,14 @@ import { AboutComponent } from './about/about.component';
     LtiaCarouselComponent,
     LtiaCarouselItemComponent,
     MenuComponent,
-    AboutComponent
+    AboutComponent,
+    FooterComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    OrderModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
