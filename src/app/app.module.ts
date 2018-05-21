@@ -11,7 +11,7 @@ import { LtiaCarouselItemComponent } from './home/ltia-carousel/ltia-carousel-it
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    OrderModule
+    OrderModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

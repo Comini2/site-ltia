@@ -72,60 +72,28 @@
             Como tutor dessas equipes, os alunos sempre foram orientados para que procurassem o desafio máximo. Se a razão de participar era aprender, criar, desenvolver, que fosse nas categorias nas quais se competia em inglês e contra equipes de alto nível o tempo todo.
             Em 2013, na Rússia, onde esse formato de competição foi utilizado pela última vez, fui entrevistado sobre nosso histórico de dez anos de Imagine Cup e homenageado pela organização das Imagine Cups com um troféu “Facultaty Member Award Americas”, junto a outros quatro professores. Mais emocionante foi receber da Microsoft Brasil a bandeira do Brasil, que acompanhou todas as equipes brasileiras ao pódio de premiação durante esses dez anos e que foi conduzida por nossas equipes quatro vezes.
           </div>
-          <div>
-            2006, Windows CE Challenge – Redmond/EUA<br>
-            MySensorNet: finalista mundial<br>
-            Marcelo van Kanspem, Evandro Rezende, Lucas Bertinotti, Rafael Teixeira.
-          </div>
-          <div>
-            2007, Imagine Cup – Seul/Coréia do Sul<br>
-            Smart Box: finalista mundial<br>
-            Marcelo Fornazin, Tiago Porangaba, Lucas Bertinoti, Rafael Teixeira.<br>
-            Pangea (finalista mundial)<br>
-            Leandro Pilan da Rocha, Tiago Pereira, Porangaba, Thiago Luiz de Carvalho Lima, Alex Assis dos Santos e Prof. Dr. Sidney Bergamaschi.
-          </div>
-          <div>
-            2008, Imagine Cup – Paris/França
-            Mother Gaia Studio: primeiro lugar na categoria Games e Prêmio Xbox Games for Change<br>
-            Guilherme Campos, Helena van Kampen, Rafael Costa, Túlio Soria.<br>
-            Learn Smart: segundo lugar nacional<br>
-            Leandro Pilan, Tiago Porangaba, Danilo Balzaque, Daniel Assad.<br>
-            Hermes: finalista nacional<br>
-            Carlos Hisamitsu, Lucas Santos, Rafael Bernardes, Marcelo Tokunaga.
-          </div>
-          <div>
-            2010, Imagine Cup – Varsóvia/Polônia<br>
-            Morg's Adventure: finalista mundial<br>
-            Alexandre Nacari, Danilo Balzaque, Pedro Cavalca, Fernanda Rodrigues.<br>
-            Macau: finalista mundial<br>
-            Thiago Fabre, Henrique Perticarati, Pedro Cavalca, João Franco. Lima, Alex Assis dos Santos e Prof. Dr. Sidney Bergamaschi.
-          </div>
-          <div>
-            2011, Imagine Cup – Nova York/EUA<br>
-            Dreams: finalista mundial<br>
-            Caroline Guilherme, Pauline Guilherme.
-          </div>
-          <div>
-            2012, Imagine Cup – Sydney/Austrália<br>
-            Help-me-Here: segundo lugar nacional<br>
-            Caroline Guilherme, Laís Mastelari, Rafael Rabelo Itajubá, Vinícius de Oliveira Borges.<br>
-            Monkey Pepper: finalista mundial<br>
-            Danilo Balzaque, Diego Sato, Leandro Saito, Paulo Infante, Rodrigo Ueda.<br>
-            Little Changes: finalista mundial<br>
-            Danilo Balzaque, Diego Sato, Leandro Saito, Paulo Infante, Rodrigo Ueda.
-          </div>
-          <div>
-            2013, Imagine Cup – São Petersburgo/Rússia<br>
-            Callveninet: primeiro lugar “Nokia-AppCampus Award”<br>
-            André Rodrigues, Diego Sato, Felipe Minutti, Pedro Cavalca.
-          </div>
-          <div>
-            2016, Brasília – Imagine Cup<br>
-            Barrel Throw: finalista nacional<br>
-            Alessandra Sasaki, Gabriel Soares, Raissa Rodrigues, Victor Cardoso.
-          </div>
-          <div class="ident-text">
-            Sinta-se à vontade para conhecer nossos projetos, nossa equipe, curta nossa página no Facebook, siga-nos no Instagram e acompanhe nossos projetos no GitHub e Behance!
+        </div>
+        <div class="buttons-container">
+            <button
+            *ngFor="let participation of participations; let i = index"
+            class="button"
+            [ngStyle]="{
+              'background-color' : activeButton === i ? 'white' : 'transparent',
+              'color' : activeButton !== i ? 'white' : '#1395AE'
+            }"
+            (click)="selectYear(i)">
+              {{participation.year}}
+            </button>
+        </div>
+        <div class="part-info" *ngIf="selectedParticipation !== undefined">
+          <p>{{selectedParticipation.competition}} - {{selectedParticipation.city}}</p>
+          <div class="part-team" *ngFor="let team of selectedParticipation.teams">
+            <p class="team-name">{{team.name}}: {{team.placement}}</p>
+            <div class="team-members">
+              <span>Membros:</span>
+              <p class="part-member" *ngFor="let member of team.members"> - {{member}}</p>
+            </div>
+            <div class="team-border"></div>
           </div>
         </div>
       </div>
