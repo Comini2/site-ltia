@@ -1,0 +1,52 @@
+@media all and (max-width: 768px) {
+    div.footer-content {
+        width: 100%;
+        margin: 0;
+    }
+    footer.footer {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    #social-logos {
+        order: 2;
+    }
+    #ltia-logo {
+        order: 1;
+    }
+
+    #tel {
+        order: 3;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    #ltia-logo span{
+        display: none;
+    }
+
+    img.footer-logos {
+        height: 60px;
+    }
+}
+
+.footer {
+    display: flex;
+    color: #535353;
+}
+
+.footer-content {
+    display: flex;
+    width: 33%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content > p {
+    margin: 0;
+    text-align: center;
+}
+
+.footer-logos {
+    height: 80px;
+}
