@@ -128,13 +128,17 @@
     letter-spacing: 0.1em;
     flex: 1 1 0;
     cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .part-info {
     background-color: transparent;
     border-left: 2px solid white;
     color: white;
-    margin: 10px 3px 50px 3px;
+    margin: 10px 3px 0px 3px;
     padding-left: 20px;
 }
 

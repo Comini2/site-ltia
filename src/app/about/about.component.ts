@@ -11,13 +11,12 @@ export class AboutComponent implements OnInit {
 
   participations : any;
   selectedParticipation : any;
-  activeButton : number = 0;
+  activeButton : number = -1;
   constructor(private jsonService : JsonService) { }
 
   ngOnInit() {
     this.jsonService.getJSON('../assets/json/teams.json', (data) => {
       this.participations = data;
-      this.selectedParticipation = data[0];
     })
   }
 
