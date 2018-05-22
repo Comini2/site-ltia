@@ -1,0 +1,116 @@
+[
+    {
+        "year" : "2007",
+        "competition" : "Imagine Cup",
+        "city" : "Seul, Coréia do Sul",
+        "teams" : [
+            {
+                "name" : "SmartBox",
+                "members" : ["Marcelo Fornazin", "Tiago Porangaba", "Lucas Bertinoti", "Rafael Teixeira"],
+                "placement" : "Finalista Mundial"
+            },
+            {
+                "name" : "Pangea",
+                "members" : ["Leandro Pilan da Rocha", "Tiago Pereira","Porangaba", "Thiago Luiz de Carvalho Lima", "Alex Assis dos Santos", "Prof. Dr. Sidney Bergamaschi"],
+                "placement" : "Finalista Mundial"
+            }
+        ]
+    },
+    {
+        "year" : "2008",
+        "competition" : "Imagine Cup",
+        "city" : "Parin, França",
+        "teams" : [
+            {
+                "name" : "Mother Gaia Studio",
+                "members" : ["Guilherme Campos", "Helena van Kampen", "Rafael Costa", "Túlio Soria"],
+                "placement" : "Primeiro lugar na categoria Games e Prêmio Xbox Games for Change"
+            },
+            {
+                "name" : "Learn Smart",
+                "members" : ["Leandro Pilan", "Tiago Porangaba", "Danilo Balzaque", "Daniel Assad"],
+                "placement": "Segundo Lugar Nacional"
+            },
+            {
+                "name" : "Hermes",
+                "members" : ["Carlos Hisamitsu", "Lucas Santos", "Rafael Bernardes", "Marcelo Tokunaga"],
+                "placement" : "Finalista Nacional"
+            }
+        ]
+    },
+    {
+        "year" : "2010",
+        "competition" : "Imagine Cup",
+        "city" : "Varsóvia, Polônia",
+        "teams" : [
+            {
+                "name" : "Morg's Adventure",
+                "members" : ["Alexandre Nacari", "Danilo Balzaque", "Pedro Cavalca", "Fernanda Rodrigues"],
+                "placement" : "Finalista Mundial"
+            },
+            {
+                "name" : "Macau",
+                "members" : ["Thiago Fabre", "Henrique Perticarati", "Pedro Cavalca", "João Franco Lima", "Alex Assis dos Santos", "Prof. Dr. Sidney Bergamaschi"],
+                "placement" : "Finalista Mundial"
+            }
+        ]
+    },
+    {
+        "year" : "2011",
+        "competition" : "Imagine Cup",
+        "city" : "Nova Iorque, EUA",
+        "teams" : [
+            {
+                "name" : "Dreams",
+                "members" : ["Caroline Guilherme", "Pauline Guilherme"],
+                "placement" : "Finalista Mundial"
+            }
+        ]
+    },
+    {
+        "year" : "2012",
+        "competition" : "Imagine Cup",
+        "city" : "Sydney, Austrália",
+        "teams" : [
+            {
+                "name" : "Help-me-here",
+                "members" : ["Caroline Guilherme", "Laís Mastelari", "Rafael Rabelo Itajubá", "Vinícius de Oliveira Borges"],
+                "placement" : "Segundo Lugar Nacional"
+            },
+            {
+                "name" : "Monkey Pepper",
+                "members" : ["Danilo Balzaque", "Diego Sato", "Leandro Saito", "Paulo Infante", "Rodrigo Ueda"],
+                "placement" : "Finalista Mundial"
+            },
+            {
+                "name" : "Little Changes",
+                "members" : ["Danilo Balzaque", "Diego Sato", "Leandro Saito", "Paulo Infante", "Rodrigo Ueda"],
+                "placement" : "Finalista Mundial"
+            }
+        ]
+    },
+    {
+        "year" : "2013",
+        "competition" : "Imagine Cup",
+        "city" : "São Petesburgo, Rússia",
+        "teams" : [
+            {
+                "name" : "Callveninet",
+                "members" : ["André Rodrigues", "Diego Sato", "Felipe Minutti", "Pedro Cavalca"],
+                "placement" : "Primeiro lugar “Nokia-AppCampus Award”"
+            }
+        ]
+    },
+    {
+        "year" : "2016",
+        "competition" : "Imagine Cup",
+        "city" : "Brasília, Brasil",
+        "teams" : [
+            {
+                "name" : "Barrel Throw",
+                "members" : ["Alessandra Sasaki", "Gabriel Soares", "Raissa Rodrigues", "Victor Cardoso"],
+                "placement" : "Finalista Nacional"
+            }
+        ]
+    }
+]
