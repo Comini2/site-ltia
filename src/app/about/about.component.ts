@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Renderer2, OnDestroy, ViewChildren, QueryList } from '@angular/core';
 import { Location } from '@angular/common';
 
 @Component({
@@ -9,15 +9,29 @@ import { Location } from '@angular/common';
 export class AboutComponent implements AfterViewInit {
 
   @ViewChild("scrollTarget") target : ElementRef;
+  @ViewChildren("img") imgs : QueryList<ElementRef>;
 
-  constructor(private location : Location) { }
+  constructor(private location : Location, private renderer : Renderer2) { }
+  loadedImgs : number = 0;
 
   ngAfterViewInit(){
-    if(this.location.path() == '/ltia-no-mundo'){
-      this.smoothScroll(250);
+
+    if(this.location.path() === '/ltia-no-mundo'){
+      if(this.loadedImgs === this.imgs.length){
+        this.smoothScroll(250);
+        return;
+      }
+      this.imgs.forEach(img => {
+        this.renderer.listen(img.nativeElement, 'load', () => {
+          this.loadedImgs++;
+          if(this.loadedImgs === this.imgs.length)
+            this.smoothScroll(250);
+        })
+      });
     }
-    else
+    else{
       window.scrollTo(0, 0);
+    }  
   }
 
   smoothScroll(totalTime : number){
