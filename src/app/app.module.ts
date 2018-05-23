@@ -12,6 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { LocationComponent } from './location/location.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectComponent } from './project/project.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     MenuComponent,
     AboutComponent,
     FooterComponent,
-    LocationComponent
+    LocationComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
