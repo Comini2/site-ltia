@@ -40,7 +40,7 @@ export class MenuComponent implements OnInit {
     { path: '', text: 'Cursos' },
     { path: '', text: 'Equipe' },
     { path: 'location', text: 'Local'},
-    { path: '', text: 'Contato'}
+    { path: 'contact', text: 'Contato'}
   ]
 
   setPagesStyle(){

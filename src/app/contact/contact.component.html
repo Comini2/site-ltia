@@ -1,0 +1,19 @@
+<div class="main">
+    <div class="container">
+      <span class="contact-text">_CONTATO</span>
+      <form [formGroup] = "reactiveForm" class="contact-form">
+        <p class="form-label">Nome </p>
+        <input class="form-input"/>
+        <p class="form-label">E-mail</p>
+        <input class="form-input"/>
+        <p class="form-label">Assunto</p>
+        <input class="form-input"/>
+        <p class="form-label">Digite aqui sua mensagem</p>
+        <textarea class="form-input"></textarea>
+        <div class="captcha">
+          <re-captcha siteKey="6LdqyFoUAAAAAM5bTcDtvw4h-aoZH9h-NgqxLldA" formControlName="recaptchaReactive"></re-captcha>
+          <button [disabled]="reactiveForm.invalid">Enviar</button>
+        </div>
+      </form>
+    </div>
+</div>
