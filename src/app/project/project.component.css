@@ -1,10 +1,63 @@
+@media(max-width: 990px){
+
+    div.project-item {
+        flex-basis: 40%;
+        margin: 25px 5%;
+    }
+}
+
+@media(max-width: 768px){
+
+    div.project-item {
+        flex-basis: 51%;
+        margin: 25px auto;
+    }
+    p.project-name {
+        height: auto;
+    }
+}
+
+@media(max-width: 576px){
+    div.project-item {
+        flex-basis: 80%;
+    }
+
+    p.project-name {
+        margin-left: 0;
+        font-size: 17px;
+        height: auto;
+    }
+
+    div.info-text {
+        font-size: 17px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    span.project-text {
+        font-size: 35px;
+        line-height: 41px;
+        margin-top: 120px;
+        margin-bottom: 30px;
+    }
+}
+
+
 .main {
     position: relative;
     background: url('/assets/img/blue-bg.png') no-repeat;
     background-size: cover;
-    width: 100%;
+    width: 200%;
     z-index: 1;
     color: white;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    user-select: none;
 }
 
 .main .container {
@@ -29,6 +82,7 @@ h3 {
     line-height: 23px;
     text-align: justify;
     text-indent: 1.5em;
+    margin-bottom: 30px;
 }
 
 .project-img {
@@ -55,16 +109,46 @@ h3 {
 .projects-container {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
 }
 
 .project-item {
     flex: 0 1 25%;
-    margin: 25px 4%;
+    margin: 25px 3%;
+    cursor: pointer;
 }
 
 .project-name {
     font-size: 20px;
     line-height: 20px;
-    height: 50px;
-    margin-left: 20px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.selected-container {
+    margin-top: 200px;
+    display: flex;
+}
+
+.selected-container > .project-img {
+    width: 45%;
+    margin-right: 10%;
+}
+
+.selected-project-item {
+    flex: 0 0 40%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    border: 3px solid white;
+    height: 120px;
+    padding: 10px;
+}
+
+.selected-project-info {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.selected-project > h1 {
+    margin-bottom: 60px;
 }

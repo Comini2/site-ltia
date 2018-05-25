@@ -1,4 +1,4 @@
-<div class="main">
+<div class="main" [@showProject]="show" (@showProject.start)="moveTop()">
   <div class="container">
     <span class="project-text">_PROJETOS</span>
     <h3>O QUE FAZEMOS?</h3>
@@ -8,13 +8,29 @@
       Além destes dois tipos, também é comum nascerem projetos de ideias provenientes da própria vivência dos alunos na universidade e no laboratório, como base para novas parcerias e criações. Confira abaixo alguns dos projetos desenvolvidos pelo LTIA, as tecnologias utilizadas nos mesmos e seus parceiros e participantes ao longo do trajeto.
     </div>
     <div class="projects-container">
-      <div class="project-item" *ngFor="let project of projects">
-        <div class="project-name">{{project.name}}</div>
+      <div class="project-item" *ngFor="let project of projects" (click)="selectProject(project)">
+        <p class="project-name">{{project.name}}</p>
         <div class="project-img">
           <div class="img-outline"></div>
           <img [src]="project.imgUrl"/>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="selected-container" *ngIf="selectedProject != undefined">
+        <div class="project-img">
+          <div class="img-outline"></div>
+          <img [src]="selectedProject.imgUrl"/>
+        </div>
+        <div class="selected-project">
+          <h1>_{{selectedProject.name | uppercase}}</h1>
+          <div class="selected-project-info">
+            <div *ngFor="let info of generateArray(selectedProject.info)" class="selected-project-item">
+              <span *ngFor="let in of info; let isLast = last">{{in}}{{isLast ? '': ', '}} </span>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
 </div>

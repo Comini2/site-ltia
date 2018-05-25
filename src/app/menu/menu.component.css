@@ -1,7 +1,4 @@
 @media only screen and (max-width: 768px) {
-    /*.lateral-bar {
-        left: -250px;
-    }*/
 
     .tiny-bar{
         display: none;
@@ -54,10 +51,6 @@ input#menu{
     display: none;
 }
 
-/*input#menu:checked ~ .lateral-bar{
-    left: 0px;
-}*/
-
 .menu-stripes {
     margin-right: 10px;
     width: 24px;
@@ -88,10 +81,6 @@ input#menu{
 
 /***************** BARRA LATERAL ********************/
 
-/*.lateral-bar-pages {
-    left: -250px;
-}*/
-
 .lateral-bar {
     position: fixed;
     height: 100vh;
@@ -101,10 +90,6 @@ input#menu{
     color: white;
     z-index: 998;
     padding-top: 130px;
-    /*transition: left 0.15s ease-in-out;
-    -o-transition: left 0.15s ease-in-out;
-    -moz-transition: left 0.15s ease-in-out;
-    -webkit-transition: left 0.15s ease-in-out;*/
 }
 
 .lateral-bar ul {
@@ -131,7 +116,7 @@ input#menu{
     position: fixed;
     top: 0;
     height: 60px;
-    width: 100%;
+    width: 100vw;
     background-color: #1A1A1A;
     display: flex;
     align-items: center;
