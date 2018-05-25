@@ -36,7 +36,7 @@ export class MenuComponent implements OnInit {
   pages = [
     { path: 'about', text: 'Sobre' },
     { path: 'ltia-no-mundo', text: 'LTIA no mundo' },
-    { path: '', text: 'Projetos' },
+    { path: 'project', text: 'Projetos' },
     { path: '', text: 'Cursos' },
     { path: '', text: 'Equipe' },
     { path: 'location', text: 'Local'},

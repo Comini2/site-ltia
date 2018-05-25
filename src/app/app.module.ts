@@ -16,6 +16,7 @@ import { ContactComponent } from './contact/contact.component';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProjectComponent } from './project/project.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     FooterComponent,
     LocationComponent,
-    ContactComponent
+    ContactComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,

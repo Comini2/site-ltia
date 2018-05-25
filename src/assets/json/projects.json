@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Material de Treinamento e Simuladores MOTOTRBO",
+        "imgUrl": "assets/img/project/mototrbo.png"
+    },
+    {
+        "name": "Nimbus",
+        "imgUrl": "assets/img/project/nimbus.png"
+    },
+    {
+        "name": "Global Game Jam 2015",
+        "imgUrl": "assets/img/project/gamejam-2015.png"
+    },
+    {
+        "name": "Prototipagem em Papel - Oficina Interdesigners 2015",
+        "imgUrl": "assets/img/project/prototipagem.png"
+    },
+    {
+        "name": "Aplicativo Jornada da Informática",
+        "imgUrl": "assets/img/project/app-jornada.png"
+
+    },
+    {
+        "name": "Reestruturação do Site do LTIA",
+        "imgUrl": "assets/img/project/site-ltia.png"
+    },
+    {
+        "name": "Game BeatCube",
+        "imgUrl": "assets/img/project/beatcube.png"
+    },
+    {
+        "name": "Carmathic",
+        "imgUrl": "assets/img/project/carmathic.png"
+    },
+    {
+        "name": "Athena Renovador",
+        "imgUrl": "assets/img/project/athena.png"
+    },
+    {
+        "name": "Aplicativo Interdesigners 2015",
+        "imgUrl": "assets/img/project/interdesigners-2015.png"
+    }
+]

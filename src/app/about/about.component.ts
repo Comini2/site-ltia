@@ -8,7 +8,7 @@ import { JsonService } from '../json.service';
   styleUrls: ['./about.component.css'],
   providers: [JsonService]
 })
-export class AboutComponent implements AfterViewInit {
+export class AboutComponent implements AfterViewInit, OnInit {
 
   @ViewChild("scrollTarget") target : ElementRef;
   @ViewChildren("img") imgs : QueryList<ElementRef>;
