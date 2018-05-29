@@ -54,6 +54,10 @@
     .selected-project {
         width: 50%;
     }
+
+    button.back-btn {
+        align-self: center;
+    }
 }
 
 @media(max-width: 768px){
@@ -148,6 +152,7 @@ h1 {
 .main .container {
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
 .main {
@@ -191,4 +196,15 @@ h1 {
 .copyright {
     font-size: 12px;
     line-height: 14px;
+}
+
+.back-btn {
+    align-self: flex-start;
+    margin: 20px 0;
+    width: 120px;
+    background-color: white;
+    border: none;
+    color: #179AB3;
+    height: 40px;
+    font-weight: 600;
 }
