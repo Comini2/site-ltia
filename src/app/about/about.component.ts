@@ -1,11 +1,20 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Renderer2, OnDestroy, ViewChildren, QueryList } from '@angular/core';
 import { Location } from '@angular/common';
 import { JsonService } from '../json.service';
+import { trigger, transition, query, style, animate, stagger } from '@angular/animations';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.css'],
+  animations: [
+    trigger('fadeIn', [
+      transition('* => *', [
+        query(':enter', style({opacity: 0, transform: 'translateX(-100px)'})),
+        query(':enter', stagger('100ms', animate('0.2s', style({opacity: 1, transform: 'translateX(0px)'})))),
+      ])
+    ])
+  ]
 })
 export class AboutComponent implements AfterViewInit, OnInit {
 

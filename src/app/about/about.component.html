@@ -85,7 +85,7 @@
               {{participation.year}}
             </button>
         </div>
-        <div class="part-info" *ngIf="selectedParticipation !== undefined">
+        <div [@fadeIn]="selectedParticipation" class="part-info" *ngIf="selectedParticipation !== undefined">
           <p>{{selectedParticipation.competition}} - {{selectedParticipation.city}}</p>
           <div class="part-team" *ngFor="let team of selectedParticipation.teams">
             <p class="team-name">{{team.name}}: {{team.placement}}</p>
