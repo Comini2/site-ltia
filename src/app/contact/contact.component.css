@@ -1,3 +1,22 @@
+@media (max-width: 768px){
+    form.contact-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    div.captcha{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    re-captcha {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+}
+
 .main {
     position: relative;
     background: url('/assets/img/blue-bg.png') no-repeat;
@@ -8,9 +27,10 @@
 }
 
 .contact-text {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 42px;
+    line-height: 50px;
     margin-top: 150px;
+    text-align: center;
 }
 
 .main .container {
@@ -23,9 +43,9 @@
     background-color: transparent;
     border: 1px solid white;
     resize: none;
-    width: 50vw;
     color: white;
     margin-bottom: 15px;
+    width: 100%;
 }
 
 .contact-form p {
@@ -34,6 +54,7 @@
 
 .contact-form {
     margin-bottom: 60px;
+    width: 60%;
 }
 
 .captcha {
@@ -59,6 +80,6 @@
     font-weight: bold;
     padding: 5px 10px;
     cursor: pointer;
-    
+    width: 100px;
 }
 
