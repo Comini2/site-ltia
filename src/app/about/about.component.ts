@@ -5,8 +5,7 @@ import { JsonService } from '../json.service';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css'],
-  providers: [JsonService]
+  styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements AfterViewInit, OnInit {
 

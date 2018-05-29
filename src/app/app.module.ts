@@ -17,6 +17,8 @@ import { RecaptchaModule } from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProjectComponent } from './project/project.component';
+import { ProjectInfoComponent } from './project-info/project-info.component';
+import { JsonService } from './json.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { ProjectComponent } from './project/project.component';
     FooterComponent,
     LocationComponent,
     ContactComponent,
-    ProjectComponent
+    ProjectComponent,
+    ProjectInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,7 @@ import { ProjectComponent } from './project/project.component';
     RecaptchaFormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [JsonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
