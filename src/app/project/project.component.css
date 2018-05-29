@@ -45,19 +45,15 @@
         margin-bottom: 30px;
     }
 }
-
-
 .main {
     position: relative;
     background: url('/assets/img/blue-bg.png') no-repeat;
     background-size: cover;
-    width: 200%;
+    width: 100%;
     z-index: 1;
     color: white;
     display: flex;
     flex-direction: row;
-    overflow-x: hidden;
-    user-select: none;
 }
 
 .main .container {
@@ -125,30 +121,3 @@ h3 {
     margin-bottom: 10px;
 }
 
-.selected-container {
-    margin-top: 200px;
-    display: flex;
-}
-
-.selected-container > .project-img {
-    width: 45%;
-    margin-right: 10%;
-}
-
-.selected-project-item {
-    flex: 0 0 40%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-    border: 3px solid white;
-    height: 120px;
-    padding: 10px;
-}
-
-.selected-project-info {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.selected-project > h1 {
-    margin-bottom: 60px;
-}
