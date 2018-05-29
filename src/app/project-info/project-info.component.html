@@ -1,0 +1,23 @@
+<div class="main">
+  <div class="container">
+    <div class="selected-container" *ngIf="selectedProject != undefined">
+      <h1>_{{selectedProject.name | uppercase}}</h1>
+      <div class="project-img">
+        <div class="img-outline"></div>
+        <img [src]="selectedProject.imgUrl"/>
+      </div>
+      <div class="selected-project">
+        <div class="selected-project-info">
+          <div *ngFor="let info of generateArray(selectedProject.info); let i = index" class="selected-project-item">
+            <p>{{infos[i]}}</p>
+            <div *ngIf="isArray(info); then thenBlock; else elseBlock"></div>
+            <ng-template #thenBlock><span *ngFor="let in of info; let isLast = last">{{in}}{{isLast ? '': ', '}} </span></ng-template>
+            <ng-template #elseBlock><span>{{info}}</span></ng-template>
+          </div>
+        </div>
+        <div class="border"></div>
+        <p class="copyright">Todas as eventuais logos e marcas, que possam ser encontradas nesta página, são propriedade de suas respectivas organizações</p>
+      </div>
+    </div>
+  </div>
+</div>
