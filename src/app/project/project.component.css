@@ -112,6 +112,11 @@ h3 {
     flex: 0 1 25%;
     margin: 25px 3%;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
 }
 
 .project-name {

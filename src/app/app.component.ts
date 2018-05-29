@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { trigger, transition, query, style, animate, group } from '@angular/animations';
+import { trigger, transition, query, style, animate, group, stagger } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +21,7 @@ import { trigger, transition, query, style, animate, group } from '@angular/anim
       ]),
       transition('project => projects', [
         query(':enter, :leave', style({position: 'absolute', width: '100%'}), {optional: true}),
+        query('.project-item', style({opacity: 0})),
         group([
           query(':enter', [
             style({ transform: 'translateX(-100%)' }),
