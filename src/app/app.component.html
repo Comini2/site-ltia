@@ -1,5 +1,7 @@
 <ltia-menu></ltia-menu>
 
-<router-outlet></router-outlet>
+<div class="router-container" [@routerAnimation]="getState(ol)">
+    <router-outlet #ol="outlet"></router-outlet>
+</div>
 
 <ltia-footer></ltia-footer>

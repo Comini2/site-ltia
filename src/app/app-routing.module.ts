@@ -10,31 +10,38 @@ import { ProjectInfoComponent } from './project-info/project-info.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    data: {state : ''}
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
+    data: {state : ''}
   },
   {
     path: 'ltia-no-mundo',
-    component: AboutComponent
+    component: AboutComponent,
+    data: {state : ''}
   },
   {
     path: 'location',
-    component: LocationComponent
+    component: LocationComponent,
+    data: {state : ''}
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: ContactComponent,
+    data: {state : ''}
   },
   {    
     path: 'projects',
-    component: ProjectComponent
+    component: ProjectComponent,
+    data: {state : 'projects'}
   },
   {
     path: 'project/:id',
-    component: ProjectInfoComponent
+    component: ProjectInfoComponent,
+    data: {state : 'project'}
   }
 ];
 

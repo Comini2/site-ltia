@@ -1,5 +1,5 @@
-import { Component, AfterViewInit, AnimationPlayer, ViewChild, ElementRef, ContentChildren, QueryList, ChangeDetectorRef } from '@angular/core';
-import { trigger, group, style, transition, stagger, animate, keyframes, query, AnimationBuilder, AnimationFactory } from  '@angular/animations';
+import { Component, AfterViewInit, ViewChild, ElementRef, ContentChildren, QueryList, ChangeDetectorRef } from '@angular/core';
+import { trigger, group, style, transition, stagger, animate, keyframes, query, AnimationBuilder, AnimationFactory, AnimationPlayer } from  '@angular/animations';
 import { LtiaCarouselItemComponent } from './ltia-carousel-item/ltia-carousel-item.component';
 import { Router, NavigationStart } from '@angular/router';
 
