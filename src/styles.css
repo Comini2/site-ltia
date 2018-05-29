@@ -9,8 +9,13 @@ html {
 body {
     position: relative;
     overflow-x: hidden;
+    min-height: 100%;
 }
 
 * {
     font-family: 'Roboto', sans-serif;
+}
+
+.main {
+    min-height: calc(100vh - 80px);
 }
