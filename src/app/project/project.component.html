@@ -1,0 +1,20 @@
+<div class="main">
+  <div class="container">
+    <span class="project-text">_PROJETOS</span>
+    <h3>O QUE FAZEMOS?</h3>
+    <div class="info-text">
+      Desde sua criação o LTIA tem construído e adotado uma filosofia baseada na responsabilidade e comprometimento com os seus projetos e clientes, através do uso da inovação como base de estudo e no incentivo ao trabalho em equipe. 
+      Ao longo de sua existência, o LTIA já desenvolveu e concluiu, com sucesso, diversos projetos, sendo alguns destes realizados em parceria com grandes empresas e outros com foco em competições nacionais e internacionais. 
+      Além destes dois tipos, também é comum nascerem projetos de ideias provenientes da própria vivência dos alunos na universidade e no laboratório, como base para novas parcerias e criações. Confira abaixo alguns dos projetos desenvolvidos pelo LTIA, as tecnologias utilizadas nos mesmos e seus parceiros e participantes ao longo do trajeto.
+    </div>
+    <div class="projects-container">
+      <div class="project-item" *ngFor="let project of projects; let i = index" [routerLink]="['/project', i]">
+        <p class="project-name">{{project.name}}</p>
+        <div class="project-img">
+          <div class="img-outline"></div>
+          <img [src]="project.imgUrl"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

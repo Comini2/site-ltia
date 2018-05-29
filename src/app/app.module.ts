@@ -11,7 +11,14 @@ import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { LocationComponent } from './location/location.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ContactComponent } from './contact/contact.component';
+import { RecaptchaModule } from 'ng-recaptcha';
+import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ProjectComponent } from './project/project.component';
+import { ProjectInfoComponent } from './project-info/project-info.component';
+import { JsonService } from './json.service';
 
 @NgModule({
   declarations: [
@@ -22,14 +29,21 @@ import { LocationComponent } from './location/location.component';
     MenuComponent,
     AboutComponent,
     FooterComponent,
-    LocationComponent
+    LocationComponent,
+    ContactComponent,
+    ProjectComponent,
+    ProjectInfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    RecaptchaModule.forRoot(),
+    RecaptchaFormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [JsonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

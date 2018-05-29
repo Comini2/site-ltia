@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Material de Treinamento e Simuladores MOTOTRBO",
+        "imgUrl": "assets/img/project/mototrbo.png",
+        "info": {
+            "members": [""],
+            "desc": [""],
+            "tools": [""],
+            "status" : ["Concluído"]
+        }
+    },
+    {
+        "name": "Nimbus",
+        "imgUrl": "assets/img/project/nimbus.png",
+        "info": {
+            "members": [""],
+            "desc": "",
+            "tools": [""],
+            "status" : "Concluído"
+        }
+    },
+    {
+        "name": "Global Game Jam 2015",
+        "imgUrl": "assets/img/project/gamejam-2015.png",
+        "info": {
+            "members": [],
+            "desc": "",
+            "tools": [],
+            "status" : "Concluído"
+        }
+    },
+    {
+        "name": "Prototipagem em Papel - Oficina Interdesigners 2015",
+        "imgUrl": "assets/img/project/prototipagem.png",
+        "info": {
+            "members": [],
+            "desc": [""],
+            "tools": [],
+            "status" : ["Concluído"]
+        }
+    },
+    {
+        "name": "Aplicativo Jornada da Informática",
+        "imgUrl": "assets/img/project/app-jornada.png",
+        "info": {
+            "members": [],
+            "desc": [""],
+            "tools": [],
+            "status" : ["Concluído"]
+        }
+    },
+    {
+        "name": "Reestruturação do Site do LTIA",
+        "imgUrl": "assets/img/project/site-ltia.png",
+        "info": {
+            "members": [],
+            "desc": [""],
+            "tools": [],
+            "status" : ["Concluído"]
+        }
+    },
+    {
+        "name": "Game BeatCube",
+        "imgUrl": "assets/img/project/beatcube.png",
+        "info": {
+            "members": [],
+            "desc": [""],
+            "tools": [],
+            "status" : ["Concluído"]
+        }
+    },
+    {
+        "name": "Carmathic",
+        "imgUrl": "assets/img/project/carmathic.png",
+        "info": {
+            "members": ["Alexandre Fernan des", "Luan Utimura", "Lucas Franci", "Matheus Peixoto", "Rafael Duran"],
+            "desc": ["Um game de raciocínio que envolve elementos matematicos e de trânsito de uma forma divertida e desafiadora."],
+            "tools": ["Unity"],
+            "status" : ["Concluído"]
+        }
+    },
+    {
+        "name": "Athena Renovador",
+        "imgUrl": "assets/img/project/athena.png",
+        "info": {
+            "members": [],
+            "desc": "",
+            "tools": [],
+            "status" : "Concluído"
+        }
+    },
+    {
+        "name": "Aplicativo Interdesigners 2015",
+        "imgUrl": "assets/img/project/interdesigners-2015.png",
+        "info": {
+            "members": [],
+            "desc": "",
+            "tools": [],
+            "status" : "Concluído"
+        }
+    }
+]
