@@ -1,0 +1,33 @@
+@media(max-width: 576px){
+    p.item-name {
+        margin-left: 0;
+        font-size: 17px;
+    }
+}
+
+.item-name {
+    font-size: 20px;
+    line-height: 20px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.item-img {
+    position: relative;
+    overflow: visible;
+    left: 5%;
+    top: 5%;
+    width: 100%;
+}
+
+.item-img > .img-outline {
+    position: absolute;
+    border: white 3px solid;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    margin: -7% 7% 7% -7%;
+}
+
+.item-img > img{
+    width: 100%;
+}
