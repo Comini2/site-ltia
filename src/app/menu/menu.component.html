@@ -16,6 +16,6 @@
 <input id="menu" type="checkbox" (click)="changeState()">
 <div class="lateral-bar" [ngClass]="barStyle" [@anim]="check">
   <ul>
-    <li *ngFor="let page of pages"><a [routerLink]="page.path">{{page.text}}</a></li>
+    <li *ngFor="let page of pages"><a [routerLink]="page.path" [fragment]="page.fragment">{{page.text}}</a></li>
   </ul>
 </div>

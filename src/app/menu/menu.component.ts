@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Location } from '@angular/common';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
@@ -35,7 +35,7 @@ export class MenuComponent implements OnInit {
 
   pages = [
     { path: 'about', text: 'Sobre' },
-    { path: 'ltia-no-mundo', text: 'LTIA no mundo' },
+    { path: 'about', fragment: 'no-mundo', text: 'LTIA no mundo' },
     { path: 'projects', text: 'Projetos' },
     //{ path: '', text: 'Cursos' },
     //{ path: '', text: 'Equipe' },
@@ -67,6 +67,7 @@ export class MenuComponent implements OnInit {
   constructor(private location: Location, private router: Router) {
     router.events.subscribe((val) => {
       if(val instanceof NavigationEnd){
+        window.scrollTo(0, 0);
         this.setStyle();
         if(this.location.path() == "")
           return;
