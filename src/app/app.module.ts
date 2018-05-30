@@ -19,6 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProjectComponent } from './project/project.component';
 import { ProjectInfoComponent } from './project-info/project-info.component';
 import { JsonService } from './json.service';
+import { LazyLoadDirective } from './lazy-load.directive';
+import { OutlineItemComponent } from './outline-item/outline-item.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { JsonService } from './json.service';
     LocationComponent,
     ContactComponent,
     ProjectComponent,
-    ProjectInfoComponent
+    ProjectInfoComponent,
+    LazyLoadDirective,
+    OutlineItemComponent
   ],
   imports: [
     BrowserModule,
