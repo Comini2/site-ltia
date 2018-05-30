@@ -21,6 +21,8 @@ import { ProjectInfoComponent } from './project-info/project-info.component';
 import { JsonService } from './json.service';
 import { LazyLoadDirective } from './lazy-load.directive';
 import { OutlineItemComponent } from './outline-item/outline-item.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { OutlineItemComponent } from './outline-item/outline-item.component';
     HttpClientModule,
     RecaptchaModule.forRoot(),
     RecaptchaFormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [JsonService],
   bootstrap: [AppComponent]

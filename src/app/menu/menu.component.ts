@@ -69,8 +69,10 @@ export class MenuComponent implements OnInit {
       if(val instanceof NavigationEnd){
         window.scrollTo(0, 0);
         this.setStyle();
-        if(this.location.path() == "")
+        if(this.location.path() == ""){
+          this.check = true;
           return;
+        }
         this.check = false;
       }
     });

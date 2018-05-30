@@ -17,7 +17,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 export class OutlineItemComponent implements OnInit, AfterViewInit {
 
   constructor(private cdRef : ChangeDetectorRef) { }
-  private loaded : boolean = false;
+  public loaded : boolean = false;
 
   @ViewChild(LazyLoadDirective) lazy : LazyLoadDirective;
 
