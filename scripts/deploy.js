@@ -59,8 +59,11 @@ function walk(rootdir, callback, subdir) {
                 }
 
                 // upload file to S3
-                s3.putObject(s3Obj, (res) => {
-                    console.log(`Successfully uploaded '${filepath}' with MIME type '${mimeType}'`)
+                s3.putObject(s3Obj, (err) => {
+                    if(err == null)
+                        console.log(`Successfully uploaded '${filepath}' with MIME type '${mimeType}'`);
+                    else
+                        console.log(err);
                 })
             })
         }
