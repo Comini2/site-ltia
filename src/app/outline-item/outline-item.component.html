@@ -1,0 +1,7 @@
+<div [@fadeIn]="loaded">
+  <p *ngIf="name !== undefined" class="item-name">{{name}}</p>
+  <div class="item-img">
+    <div class="img-outline"></div>
+    <img lazy-load [lazy-src]="imgUrl"/>
+  </div>
+</div>
