@@ -1,39 +1,23 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, QueryList } from '@angular/core';
 import { JsonService } from '../json.service';
-import { trigger, state, style, transition, animate, stagger, query } from '@angular/animations';
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css'],
-  animations: [
-    trigger('fadeIn', [
-      transition('* => *', [
-        query(':enter', style({opacity: 0, transform: 'translateX(100%)'}), {optional: true}),
-        query(':enter', [
-          stagger('100ms',[
-            animate('.3s ease-out',style({ opacity: 1, transform: 'translateX(0%)'}))
-          ])
-        ], {optional: true})
-      ])
-    ])
-  ]
+  styleUrls: ['./project.component.css']
 })
-export class ProjectComponent implements OnInit, AfterViewInit {
+export class ProjectComponent implements OnInit {
 
   projects = [];
 
   constructor(private jsonService : JsonService) {
-    jsonService.getJSON('assets/json/projects.json', (data) => {
-      this.projects = data;
-    })
+    
    }
 
   ngOnInit() {
-  }
-
-  ngAfterViewInit() {
-    
+    this.jsonService.getJSON('assets/json/projects.json', (data) => {
+      this.projects = data;
+    })
   }
 
 }

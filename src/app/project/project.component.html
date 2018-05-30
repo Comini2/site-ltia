@@ -7,14 +7,9 @@
       Ao longo de sua existência, o LTIA já desenvolveu e concluiu, com sucesso, diversos projetos, sendo alguns destes realizados em parceria com grandes empresas e outros com foco em competições nacionais e internacionais. 
       Além destes dois tipos, também é comum nascerem projetos de ideias provenientes da própria vivência dos alunos na universidade e no laboratório, como base para novas parcerias e criações. Confira abaixo alguns dos projetos desenvolvidos pelo LTIA, as tecnologias utilizadas nos mesmos e seus parceiros e participantes ao longo do trajeto.
     </div>
-    <div [@fadeIn]="projects.length" class="projects-container">
-      <div class="project-item" *ngFor="let project of projects; let i = index" [routerLink]="['/project', i]">
-        <p class="project-name">{{project.name}}</p>
-        <div class="project-img">
-          <div class="img-outline"></div>
-          <img [src]="project.imgUrl"/>
-        </div>
-      </div>
+    <div class="projects-container">
+      <outline-item class="project-item" *ngFor="let project of projects; let i = index" 
+      [name]="project.name" [imgUrl]="project.imgUrl" [routerLink]="['/project', i]"></outline-item>
     </div>
   </div>
 </div>
