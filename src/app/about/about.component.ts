@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit} from '@angular/core';
 import { JsonService } from '../json.service';
 import { trigger, transition, query, style, animate, stagger } from '@angular/animations';
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import {Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -23,14 +23,12 @@ export class AboutComponent implements AfterViewInit, OnInit {
   activeButton : number = -1;
   private fragment : string;
 
-  constructor(private jsonService : JsonService, private route: ActivatedRoute, private router : Router) { }
+  constructor(private jsonService : JsonService, private router : Router) { }
 
   ngOnInit() {
-    this.route.fragment.subscribe(fragment => {this.fragment = fragment});
-
-    this.router.events.subscribe( e => {
-      if( e instanceof NavigationEnd) {
-        const tree = this.router.parseUrl(this.router.url);
+    this.router.events.subscribe(e => {
+      if(e instanceof NavigationEnd) {
+        this.fragment = this.router.parseUrl(this.router.url).fragment;
         try{
           document.querySelector('#' + this.fragment).scrollIntoView();
           window.scrollBy(0, -80);
@@ -49,20 +47,6 @@ export class AboutComponent implements AfterViewInit, OnInit {
       window.scrollBy(0, -80);
     } catch (e) {}
   }
-
-  // smoothScroll(totalTime : number){
-  //   let deltaTime = 1000/60;
-  //   let targetPosition = this.target.nativeElement.offsetTop - this.target.nativeElement.offsetHeight;
-  //   let speed = targetPosition/totalTime;
-  //   let loops = targetPosition/(speed*deltaTime);
-  //   let currentPosition = 0;
-  //   for(let i = 0; i<loops; i++){
-  //     setTimeout(() => {
-  //       currentPosition += speed*deltaTime;
-  //       window.scrollTo(0, currentPosition);
-  //     }, deltaTime*i);
-  //   }
-  // }
 
   selectYear(index){
     this.activeButton = index;
