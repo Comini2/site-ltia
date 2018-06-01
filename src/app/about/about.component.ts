@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit} from '@angular/core';
+import { Component, OnInit, AfterViewInit, HostListener} from '@angular/core';
 import { JsonService } from '../json.service';
 import { trigger, transition, query, style, animate, stagger } from '@angular/animations';
 import {Router, NavigationEnd } from '@angular/router';
@@ -16,7 +16,7 @@ import {Router, NavigationEnd } from '@angular/router';
     ])
   ]
 })
-export class AboutComponent implements AfterViewInit, OnInit {
+export class AboutComponent implements OnInit {
 
   participations : any;
   selectedParticipation : any;
@@ -25,6 +25,10 @@ export class AboutComponent implements AfterViewInit, OnInit {
 
   constructor(private jsonService : JsonService, private router : Router) { }
 
+  @HostListener('window:load') onWindowLoad(){
+    this.fragment = this.router.parseUrl(this.router.url).fragment;
+  }
+
   ngOnInit() {
     this.router.events.subscribe(e => {
       if(e instanceof NavigationEnd) {
@@ -32,20 +36,13 @@ export class AboutComponent implements AfterViewInit, OnInit {
         try{
           document.querySelector('#' + this.fragment).scrollIntoView();
           window.scrollBy(0, -80);
-        } catch (e) {}
+        } catch (e) {console.log}
       }
     });
 
     this.jsonService.getJSON('../assets/json/teams.json', (data) => {
       this.participations = data;
     })
-  }
-
-  ngAfterViewInit(){
-    try{
-      document.querySelector('#' + this.fragment).scrollIntoView();
-      window.scrollBy(0, -80);
-    } catch (e) {}
   }
 
   selectYear(index){
