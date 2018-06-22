@@ -23,6 +23,7 @@ import { LazyLoadDirective } from './lazy-load.directive';
 import { OutlineItemComponent } from './outline-item/outline-item.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { environment } from '../environments/environment';
     ProjectComponent,
     ProjectInfoComponent,
     LazyLoadDirective,
-    OutlineItemComponent
+    OutlineItemComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,

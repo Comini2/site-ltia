@@ -6,6 +6,7 @@ import { LocationComponent } from './location/location.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectComponent } from './project/project.component';
 import { ProjectInfoComponent } from './project-info/project-info.component';
+import { TeamComponent } from './team/team.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,11 @@ const routes: Routes = [
     path: 'project/:id',
     component: ProjectInfoComponent,
     data: {state : 'project'}
+  },
+  {
+    path: 'team',
+    component: TeamComponent,
+    data: {state : ''}
   }
 ];
 

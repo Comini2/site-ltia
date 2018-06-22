@@ -38,7 +38,7 @@ export class MenuComponent implements OnInit {
     { path: 'about', fragment: 'no-mundo', text: 'LTIA no mundo' },
     { path: 'projects', text: 'Projetos' },
     //{ path: '', text: 'Cursos' },
-    //{ path: '', text: 'Equipe' },
+    { path: 'team', text: 'Equipe' },
     { path: 'location', text: 'Local'},
     { path: 'contact', text: 'Contato'}
   ]
