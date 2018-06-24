@@ -3,11 +3,11 @@
     <span class="member-text">_EQUIPE</span>
     <h3>QUEM FAZ PARTE DO LTIA?</h3>
     <div class="info-text">
-      O LTIA atualmente é composto pelos seguintes integrantes
+      O LTIA atualmente é composto pelos seguintes integrantes:
     </div>
     <div class="member-container">
       <div class="member-item" *ngFor="let member of members; let i = index">
-        <outline-item [name]="member.name" [imgUrl]="member.imgUrl"></outline-item>
+        <outline-item-team [name]="member.name" [role]="member.role" [imgUrl]="member.imgUrl" [behance]="member.behance" [github]="member.github" [linkedin]="member.linkedin" [facebook]="member.facebook" [twitter]="member.twitter" [instagram]="member.instagram"></outline-item-team>
       </div>
     </div>
     <div class="info-text">

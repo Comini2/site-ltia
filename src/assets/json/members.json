@@ -2,26 +2,199 @@
     {
         "name": "Gabriela Mithidieri",
         "role": "designer",
-        "imgUrl": "assets/img/member/gabrielamithidieri.png"
+        "imgUrl": "assets/img/member/gabrielamithidieri.png",
+        "facebook": "https://www.facebook.com/gabriela.mithidieri",
+        "instagram": "https://www.instagram.com/mithinnaz/"
+    },
+    {
+        "name": "Fernanda Masuko",
+        "role": "designer",
+        "imgUrl": "assets/img/member/fernandamasuko.png",
+        "facebook": "https://www.facebook.com/fernandamayumimasuko",
+        "instagram": "https://www.instagram.com/_flor.arte/"
 
     },
     {
-        "name": "Gabriela Mithidieri",
+        "name": "Robson Junior",
         "role": "designer",
-        "imgUrl": "assets/img/member/gabrielamithidieri.png"
+        "imgUrl": "assets/img/member/robsonjunior.png",
+        "behance": "https://www.behance.net/robsaes",
+        "linkedin": "https://www.linkedin.com/in/robsaes/",
+        "facebook": "https://www.facebook.com/rob.saes",
+        "twitter": "https://twitter.com/@dbatteryRob",
+        "instagram": "https://www.instagram.com/robsaes/"
 
     },
     {
-        "name": "Gabriela Mithidieri",
-        "role": "designer",
-        "imgUrl": "assets/img/member/gabrielamithidieri.png"
-
+        "name": "Felipe dos Santos",
+        "role": "desenvolvedor",
+        "imgUrl": "assets/img/member/felipesantos.png",
+        "github": "https://github.com/FelipeSantos21",
+        "linkedin": "https://www.linkedin.com/in/felipesantos21",
+        "facebook": "https://www.facebook.com/FelipeSantos212"
     },
     {
-        "name": "Gabriela Mithidieri",
+        "name": "João Andreossi",
+        "role": "desenvolvedor",
+        "imgUrl": "assets/img/member/joaoandreossi.png",
+        "instagram": "https://www.instagram.com/joaoandreossi/",
+        "linkedin": "https://www.linkedin.com/in/jo%C3%A3o-andreossi-734056134/",
+        "facebook": "https://www.facebook.com/joao.andreossi"
+    },
+    {
+        "name": "Ricardo Milhim",
         "role": "designer",
-        "imgUrl": "assets/img/member/gabrielamithidieri.png"
-
+        "imgUrl": "assets/img/member/ricardomilhim.png",
+        "facebook": "https://www.facebook.com/ricardo.gameirolopesmilhim"
+    },
+    {
+        "name": "Thais Pereira",
+        "role": "designer",
+        "imgUrl": "assets/img/member/thaispereira.png",
+        "facebook": "https://www.facebook.com/thais.maria.18",
+        "instagram": "https://www.instagram.com/thais.maria20/"
+    },
+    {
+        "name": "Rhuan Esborini",
+        "role": "desenvolvedor",
+        "imgUrl": "assets/img/member/rhuanesborini.png"
+    },
+    {
+        "name": "Matheus Melo",
+        "role": "desenvolvedor",
+        "imgUrl": "assets/img/member/matheusmelo.png",
+        "linkedin": "https://www.linkedin.com/in/matheus-melo-9a4269160",
+        "facebook": "https://www.facebook.com/MahtuesHR.Melo",
+        "instagram": "https://www.instagram.com/_matheusmhmelo/"
+    },
+    {
+        "name": "João Lopes",
+        "role": "gerente de projetos",
+        "imgUrl": "assets/img/member/joaolopes.png",
+        "facebook": "https://www.facebook.com/100000469106766"
+    },
+    {
+        "name": "Gabriela Akyama",
+        "role": "designer",
+        "imgUrl": "assets/img/member/gabrielaakyama.png",
+        "instagram": "https://www.instagram.com/akyama_airi/"
+    },
+    {
+        "name": "Marcelo Bento",
+        "role": "desenvolvedor",
+        "imgUrl": "assets/img/member/marcelobento.png"
+    },
+    {
+        "name": "Alexei Neto",
+        "role": "projetista",
+        "imgUrl": "assets/img/member/alexeineto.png",
+        "facebook": "https://www.facebook.com/lisounenko"
+    },
+    {
+        "name": "Pedro Barros",
+        "role": "desenvolvedor",
+        "imgUrl": "assets/img/member/pedrobarros.png",
+        "facebook": "https://www.facebook.com/pedrohnbarros"
+    },
+    {
+        "name": "Isabelle Ribaldo",
+        "role": "designer",
+        "imgUrl": "assets/img/member/isabelleribaldo.png",
+        "facebook": "https://www.facebook.com/lostreny"
+    },
+    {
+        "name": "Pedro Lamkowski",
+        "role": "desenvolvedor",
+        "imgUrl": "assets/img/member/pedrolamkowski.png",
+        "linkedin": "https://www.linkedin.com/in/pedro-lamkowski-aba6b2161"
+    },
+    {
+        "name": "Heitor Queiroz",
+        "role": "designer",
+        "imgUrl": "assets/img/member/heitorqueiroz.png",
+        "twitter": "https://twitter.com/HeitorVasq",
+        "facebook": "https://www.facebook.com/heitor.queiroz.73",
+        "instagram": "https://www.instagram.com/heitorvasq/"
+    },
+    {
+        "name": "Isabela Saullo",
+        "role": "designer",
+        "imgUrl": "assets/img/member/isabelasaullo.png",
+        "facebook": "https://www.facebook.com/isabela.saullo",
+        "instagram": "https://www.instagram.com/isabelasaullo/"
+    },
+    {
+        "name": "João Milone",
+        "role": "desenvolvedor",
+        "imgUrl": "assets/img/member/joaomilone.png",
+        "facebook": "https://www.facebook.com/joao.milone"
+    },
+    {
+        "name": "Isabela Saullo",
+        "role": "designer",
+        "imgUrl": "assets/img/member/isabelasaullo.png",
+        "facebook": "https://www.facebook.com/isabela.saullo",
+        "instagram": "https://www.instagram.com/isabelasaullo/"
+    },
+    {
+        "name": "Winea Pasquareli",
+        "role": "desenvolvedor",
+        "imgUrl": "assets/img/member/wineapasquareli.png",
+        "linkedin": "https://www.linkedin.com/in/winea-pasquareli-7466793b/"
+    },
+    {
+        "name": "Rocco Cavenaghi",
+        "role": "designer",
+        "imgUrl": "assets/img/member/roccocavenaghi.png",
+        "facebook": "https://www.facebook.com/roccopocus"
+    },
+    {
+        "name": "Mateus Archangelo",
+        "role": "desenvolvedor",
+        "imgUrl": "assets/img/member/mateusarchangelo.png"
+    },
+    {
+        "name": "Gabriel Lorensoni",
+        "role": "desenvolvedor",
+        "imgUrl": "assets/img/member/gabirellorensoni.png",
+        "linkedin": "https://www.linkedin.com/in/gabriel-kojima-lorensoni-a74208156/"
+    },
+    {
+        "name": "João Comini",
+        "role": "desenvolvedor",
+        "imgUrl": "assets/img/member/joaocomini.png",
+        "facebook": "https://www.facebook.com/jpcomini",
+        "github": "https://github.com/comini2"
+    },
+    {
+        "name": "Leonardo de Oliveira",
+        "role": "desenvolvedor",
+        "imgUrl": "assets/img/member/leonardooliveira.png",
+        "facebook": "https://www.facebook.com/LeonardoOliv42",
+        "twitter": " https://twitter.com/LeonardoOliv42",
+        "github": "https://github.com/Leonerd42",
+        "linkedin": "https://www.linkedin.com/in/leonardooliveira42/"
+    },
+    {
+        "name": "Francisco Franco",
+        "role": "desenvolvedor",
+        "imgUrl": "assets/img/member/franciscofranco.png",
+        "github": "https://github.com/FranciscoGF"
+    },
+    {
+        "name": "Ana Massa",
+        "role": "designer",
+        "imgUrl": "assets/img/member/anamassa.png",
+        "facebook": "https://www.facebook.com/anamassadomingues",
+        "behance": "https://www.behance.net/anamdomingues",
+        "linkedin": "https://www.linkedin.com/in/ana-massa/"
+    },
+    {
+        "name": "Paulo Maia",
+        "role": "desenvolvedor",
+        "imgUrl": "assets/img/member/paulomaia.png",
+        "facebook": "https://www.facebook.com/pauloeduardo.manzonemaia",
+        "github": "https://github.com/paulo-manzone",
+        "linkedin": "https://www.linkedin.com/in/paulo-eduardo-manzone-maia-114174120/"
     }
-
 ]

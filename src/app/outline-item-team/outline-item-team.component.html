@@ -1,0 +1,16 @@
+<div [@fadeIn]="loaded">
+  <p *ngIf="name !== undefined" class="item-name">{{name}}</p>
+  <p *ngIf="role !== undefined" class="item-role">{{role}}</p>
+  <div class="item-img">
+    <div class="img-outline"></div>
+    <img lazy-load [lazy-src]="imgUrl"/>
+  </div>
+  <ul class="social-media">
+    <li *ngIf="behance !== undefined"><a href= {{behance}} target="_blank"><img src="./assets/img/behance.png"></a></li>
+    <li *ngIf="github !== undefined"><a href= {{github}} target="_blank"><img src="./assets/img/github.png"></a></li>
+    <li *ngIf="linkedin !== undefined"><a href= {{linkedin}} target="_blank"><img src="./assets/img/linkedin.png"></a></li>
+    <li *ngIf="facebook !== undefined"><a href= {{facebook}} target="_blank"><img src="./assets/img/facebook.png"></a></li>
+    <li *ngIf="instagram !== undefined"><a href= {{instagram}} target="_blank"><img src="./assets/img/instagram.png"></a></li>
+    <li *ngIf="twitter !== undefined"><a href= {{twitter}} target="_blank"><img src="./assets/img/twitter.png"></a></li>
+  </ul>
+</div>

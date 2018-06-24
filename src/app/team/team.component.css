@@ -54,7 +54,7 @@
 }
 
 .member-text {
-    font-size: 48px;
+    font-size: 20px;
     line-height: 56px;
     margin-top: 150px;
     margin-bottom: 50px;
@@ -65,11 +65,12 @@ h3 {
 }
 
 .info-text {
-    font-size: 20px;
+    font-size: 12px;
     line-height: 23px;
-    text-align: justify;
+    text-align: left;
     text-indent: 1.5em;
     margin-bottom: 30px;
+    margin-left: 0;
 }
 
 .member-container {
@@ -79,8 +80,8 @@ h3 {
 }
 
 .member-item {
-    flex: 0 1 25%;
-    margin: 25px 3%;
+    flex: 0 1 18%;
+    margin: 25px 2%;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     -o-transition: transform 0.2s ease-in-out;
@@ -90,4 +91,8 @@ h3 {
 
 .member-item:hover {
     transform: scale(1.05);
+}
+
+.member-text {
+    font-size: 50px;
 }
