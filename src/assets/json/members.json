@@ -130,13 +130,6 @@
         "facebook": "https://www.facebook.com/joao.milone"
     },
     {
-        "name": "Isabela Saullo",
-        "role": "designer",
-        "imgUrl": "assets/img/member/isabelasaullo.png",
-        "facebook": "https://www.facebook.com/isabela.saullo",
-        "instagram": "https://www.instagram.com/isabelasaullo/"
-    },
-    {
         "name": "Winea Pasquareli",
         "role": "desenvolvedor",
         "imgUrl": "assets/img/member/wineapasquareli.png",
@@ -156,7 +149,7 @@
     {
         "name": "Gabriel Lorensoni",
         "role": "desenvolvedor",
-        "imgUrl": "assets/img/member/gabirellorensoni.png",
+        "imgUrl": "assets/img/member/gabriellorensoni.png",
         "linkedin": "https://www.linkedin.com/in/gabriel-kojima-lorensoni-a74208156/"
     },
     {
