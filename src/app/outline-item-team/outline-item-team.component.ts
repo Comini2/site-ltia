@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { LazyLoadDirective } from '../lazy-load.directive';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { AcessibilityService } from '../acessibility.service';
 
 @Component({
   selector: 'outline-item-team',
@@ -16,7 +17,19 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class OutlineItemTeamComponent implements OnInit, AfterViewInit {
 
-  constructor(private cdRef : ChangeDetectorRef) { }
+   /***************** Acessibility Scripts ***************/
+   aOn = {
+    'background-color' : 'white',
+    'color' : 'black',
+    'padding' : '40px',
+    'font-weight' : 'bold'
+   };
+  public getAccessibilityState() {
+    return AcessibilityService.accessibilityIsOn;
+  }
+  /********************************************************/
+
+  constructor(private cdRef : ChangeDetectorRef, private access: AcessibilityService) { }
   public loaded : boolean = false;
 
   @ViewChild(LazyLoadDirective) lazy : LazyLoadDirective;

@@ -1,16 +1,16 @@
 <div class="main">
   <div class="container">
-    <span class="about-text">_ACESSIBILIDADE</span>
+    <span [ngStyle]='getAccessibilityState()? aOn : null' class="about-text">_ACESSIBILIDADE</span>
 
     <div class="row about-img">
-      <div class="col-11 col-md-12 center-block">
+      <div [ngStyle]='getAccessibilityState()? aOn : null' class="col-11 col-md-12 center-block">
         <img src="assets/img/acessibilidade.png">
       </div>
     </div>
 
     <div class="row">
       <div class="col-10 col-md-12 center-block">
-        <div class="info-text ident-text">
+        <div [ngStyle]='getAccessibilityState()? aOn : null' class="info-text ident-text">
           Visando proporcionar a melhor experiência possível aos usuários do site,
           foi implementado o modo de acessibilidade, que se encontra no canto superior
           direito de todas as páginas, para atender as necessidades de pessoas com

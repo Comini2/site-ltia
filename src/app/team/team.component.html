@@ -1,8 +1,8 @@
 <div class="main">
   <div class="container">
-    <span class="member-text">_EQUIPE</span>
-    <h3>QUEM FAZ PARTE DO LTIA?</h3>
-    <div class="info-text">
+    <span class="member-text" [ngStyle]="getAccessibilityState()? aOn : null" >_EQUIPE</span>
+    <h3 [ngStyle]="getAccessibilityState()? aOn : null" >QUEM FAZ PARTE DO LTIA?</h3>
+    <div [ngStyle]="getAccessibilityState()? aOn : null" class="info-text">
       O LTIA atualmente é composto pelos seguintes integrantes:
     </div>
     <div class="member-container">
@@ -10,7 +10,7 @@
         <outline-item-team [name]="member.name" [role]="member.role" [imgUrl]="member.imgUrl" [behance]="member.behance" [github]="member.github" [linkedin]="member.linkedin" [facebook]="member.facebook" [twitter]="member.twitter" [instagram]="member.instagram"></outline-item-team>
       </div>
     </div>
-    <div class="info-text">
+    <div  [ngStyle]="getAccessibilityState()? aOn : null" class="info-text">
       Todas as eventuais logos e marcas, que possam ser encontradas nesta página, são propriedade de suas respectivas organizações
     </div>
   </div>

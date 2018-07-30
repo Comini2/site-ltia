@@ -18,18 +18,18 @@ import {Router, NavigationEnd } from '@angular/router';
 })
 export class AboutComponent implements AfterViewInit, OnInit {
 
-  participations : any;
-  selectedParticipation : any;
-  activeButton : number = -1;
-  private fragment : string;
+  participations: any;
+  selectedParticipation: any;
+  activeButton = -1;
+  private fragment: string;
 
-  constructor(private jsonService : JsonService, private router : Router) { }
+  constructor(private jsonService: JsonService, private router: Router) { }
 
   ngOnInit() {
     this.router.events.subscribe(e => {
-      if(e instanceof NavigationEnd) {
+      if (e instanceof NavigationEnd) {
         this.fragment = this.router.parseUrl(this.router.url).fragment;
-        try{
+        try {
           document.querySelector('#' + this.fragment).scrollIntoView();
           window.scrollBy(0, -80);
         } catch (e) {}
@@ -38,17 +38,17 @@ export class AboutComponent implements AfterViewInit, OnInit {
 
     this.jsonService.getJSON('../assets/json/teams.json', (data) => {
       this.participations = data;
-    })
+    });
   }
 
-  ngAfterViewInit(){
-    try{
+  ngAfterViewInit() {
+    try {
       document.querySelector('#' + this.fragment).scrollIntoView();
       window.scrollBy(0, -80);
     } catch (e) {}
   }
 
-  selectYear(index){
+  selectYear(index) {
     this.activeButton = index;
     this.selectedParticipation = this.participations[index];
   }

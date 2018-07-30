@@ -1,6 +1,7 @@
 import { Component, OnInit, QueryList, Input } from '@angular/core';
 import { JsonService } from '../json.service';
 import { MenuComponent } from '../menu/menu.component';
+import { AcessibilityService } from '../acessibility.service';
 
 @Component({
   selector: 'app-team',
@@ -11,17 +12,28 @@ export class TeamComponent implements OnInit {
 
   members = [];
 
+   /***************** Acessibility Scripts ***************/
+   aOn = {
+     'font-size' : '30px',
+     'background-color' : 'white',
+     'color' : 'black'
+     'padding' : '10px',
+     'font-weight' : 'bold'
+    };
+   public getAccessibilityState() {
+     return AcessibilityService.accessibilityIsOn;
+   }
+   /********************************************************/
 
-  aOn = {'font-size' : '60px'}
-  aOff = {'font-size' : '30px'}
 
-  constructor(private jsonService : JsonService) {
+
+  constructor(private jsonService: JsonService, private access: AcessibilityService) {
   }
 
   ngOnInit() {
     this.jsonService.getJSON('assets/json/members.json', (data) => {
       this.members = data;
-    })
+    });
   }
 
 }

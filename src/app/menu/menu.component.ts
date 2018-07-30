@@ -2,6 +2,7 @@ import { Component, OnInit, Input} from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Location } from '@angular/common';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { AcessibilityService } from '../acessibility.service';
 
 
 @Component({
@@ -21,43 +22,37 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class MenuComponent implements OnInit {
 
-  check : boolean = true;
+  check = true;
 
-  aOn = { 'border' : '2px solid green'}
+  menuHomeStyle = { 'menu-button-pages' : false };
 
-  aOff = { 'border' : '2px solid red'}
+  menuPagesStyle = { 'menu-button-pages' : true };
 
-  menuHomeStyle = { 'menu-button-pages' : false }
+  barHomeStyle = { 'lateral-bar-pages' : false };
 
-  menuPagesStyle = { 'menu-button-pages' : true }
-
-  barHomeStyle = { 'lateral-bar-pages' : false }
-
-  barPagesStyle = { 'lateral-bar-pages' : true }
+  barPagesStyle = { 'lateral-bar-pages' : true };
 
   barStyle = this.barHomeStyle;
   menuStyle = this.menuHomeStyle;
-
-  accessibilityState: boolean = false;
 
 
   pages = [
     { path: 'about', text: 'Sobre' },
     { path: 'about', fragment: 'no-mundo', text: 'LTIA no mundo' },
     { path: 'projects', text: 'Projetos' },
-    //{ path: '', text: 'Cursos' },
+    // { path: '', text: 'Cursos' },
     { path: 'team', text: 'Equipe' },
     { path: 'location', text: 'Local'},
     { path: 'contact', text: 'Contato'},
     { path: 'accessibility', text: 'Acessibilidade'}
-  ]
+  ];
 
-  setPagesStyle(){
+  setPagesStyle() {
     this.barStyle = this.barPagesStyle;
     this.menuStyle = this.menuPagesStyle;
   }
 
-  setHomeStyle(){
+  setHomeStyle() {
     this.barStyle = this.barHomeStyle;
     this.menuStyle = this.menuHomeStyle;
   }
@@ -69,30 +64,35 @@ export class MenuComponent implements OnInit {
       this.setHomeStyle();
   }
 
-  changeState(){
+  changeState() {
     this.check = !this.check;
   }
 
-  accessibilitySwitch(){
-    this.accessibilityState = !this.accessibilityState;
+  /***************** Acessibility Scripts ***************/
+  aOn = { 'border' : '2px solid green' };
+
+  aOff = { 'border' : '2px solid red' };
+  
+  accessibilitySwitch() {
+    AcessibilityService.changeAccessibilityState();
   }
 
-  public getAccessibilityState(){
-    return this.accessibilityState;
+  public getAccessibilityState() {
+    return AcessibilityService.accessibilityIsOn;
   }
 
   onKeydown(event) {
-    if (event.key === "Enter" || event.keyCode === 32 /*spacebar*/) {
+    if (event.key === 'Enter' || event.keyCode === 32 /*spacebar*/) {
       this.accessibilitySwitch();
     }
   }
-
-  constructor(private location: Location, private router: Router) {
+  /********************************************************/
+  constructor(private location: Location, private router: Router, private access: AcessibilityService) {
     router.events.subscribe((val) => {
-      if(val instanceof NavigationEnd){
+      if(val instanceof NavigationEnd) {
         window.scrollTo(0, 0);
         this.setStyle();
-        if(this.location.path() == ""){
+        if(this.location.path() == '') {
           this.check = true;
           return;
         }
