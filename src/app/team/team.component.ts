@@ -1,5 +1,6 @@
-import { Component, OnInit, QueryList } from '@angular/core';
+import { Component, OnInit, QueryList, Input } from '@angular/core';
 import { JsonService } from '../json.service';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-team',
@@ -10,8 +11,11 @@ export class TeamComponent implements OnInit {
 
   members = [];
 
-  constructor(private jsonService : JsonService) { 
 
+  aOn = {'font-size' : '60px'}
+  aOff = {'font-size' : '30px'}
+
+  constructor(private jsonService : JsonService) {
   }
 
   ngOnInit() {

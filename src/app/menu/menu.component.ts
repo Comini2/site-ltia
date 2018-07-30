@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Location } from '@angular/common';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+
 
 @Component({
   selector: 'ltia-menu',
@@ -22,6 +23,10 @@ export class MenuComponent implements OnInit {
 
   check : boolean = true;
 
+  aOn = { 'border' : '2px solid green'}
+
+  aOff = { 'border' : '2px solid red'}
+
   menuHomeStyle = { 'menu-button-pages' : false }
 
   menuPagesStyle = { 'menu-button-pages' : true }
@@ -32,6 +37,9 @@ export class MenuComponent implements OnInit {
 
   barStyle = this.barHomeStyle;
   menuStyle = this.menuHomeStyle;
+
+  accessibilityState: boolean = false;
+
 
   pages = [
     { path: 'about', text: 'Sobre' },
@@ -64,6 +72,14 @@ export class MenuComponent implements OnInit {
     this.check = !this.check;
   }
 
+  accessibilitySwitch(){
+    this.accessibilityState = !this.accessibilityState;
+  }
+
+  public getAccessibilityState(){
+    return this.accessibilityState;
+  }
+
   constructor(private location: Location, private router: Router) {
     router.events.subscribe((val) => {
       if(val instanceof NavigationEnd){
@@ -81,5 +97,6 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.setStyle();
   }
+
 
 }
