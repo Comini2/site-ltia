@@ -2,8 +2,8 @@
   <div routerLink="" class="img-container"><img src="./assets/img/logo.png"/></div>
   <div class="tiny-bar"></div>
   <p>TECHNOLOGY</p>
-  <div [ngStyle]="getAccessibilityState()? aOn : aOff" class="a-bar" (click)="accessibilitySwitch()">
-    <img src="./assets/img/acessibilidade.png">
+  <div [ngStyle]="getAccessibilityState()? aOn : aOff" class="a-bar" tabindex="1" (click)="accessibilitySwitch()" (keydown)="onKeydown($event)">
+    <img src="./assets/img/acessibilidade.png" tabindex="1" alt="Botão de ativar modo acessibilidade / Turn on accessibility mode">
   </div> 
 </div>
 

@@ -25,6 +25,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { TeamComponent } from './team/team.component';
 import { OutlineItemTeamComponent } from './outline-item-team/outline-item-team.component';
+import { AccessibilityComponent } from './accessibility/accessibility.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { OutlineItemTeamComponent } from './outline-item-team/outline-item-team.
     LazyLoadDirective,
     OutlineItemComponent,
     TeamComponent,
-    OutlineItemTeamComponent
+    OutlineItemTeamComponent,
+    AccessibilityComponent
   ],
   imports: [
     BrowserModule,

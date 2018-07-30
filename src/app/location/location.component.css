@@ -22,9 +22,31 @@
     background: url('/assets/img/blue-bg.png') no-repeat;
     background-size: cover;
     width: 100%;
-    z-index: -2;
+    z-index: 0;
     color: white;
 }
+
+.map-md {
+    z-index: 1000;
+    display: flex;
+    max-width: 100%;
+    margin: 5px 10px;
+}
+.map-sm {
+    display: none;
+    z-index: 1000;
+    max-width: 100%;
+    margin: 0px;
+}
+@media(max-width: 700px) {
+    .map-sm {
+        display: flex;
+    }
+    .map-md {
+        display: none;
+    }
+}
+
 
 
 .about-img > .img-outline {

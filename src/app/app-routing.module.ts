@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProjectComponent } from './project/project.component';
 import { ProjectInfoComponent } from './project-info/project-info.component';
 import { TeamComponent } from './team/team.component';
+import { AccessibilityComponent } from './accessibility/accessibility.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,11 @@ const routes: Routes = [
   {
     path: 'team',
     component: TeamComponent,
+    data: {state : ''}
+  },
+  {
+    path: 'accessibility',
+    component: AccessibilityComponent,
     data: {state : ''}
   }
 ];

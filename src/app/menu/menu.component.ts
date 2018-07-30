@@ -48,7 +48,8 @@ export class MenuComponent implements OnInit {
     //{ path: '', text: 'Cursos' },
     { path: 'team', text: 'Equipe' },
     { path: 'location', text: 'Local'},
-    { path: 'contact', text: 'Contato'}
+    { path: 'contact', text: 'Contato'},
+    { path: 'accessibility', text: 'Acessibilidade'}
   ]
 
   setPagesStyle(){
@@ -78,6 +79,12 @@ export class MenuComponent implements OnInit {
 
   public getAccessibilityState(){
     return this.accessibilityState;
+  }
+
+  onKeydown(event) {
+    if (event.key === "Enter" || event.keyCode === 32 /*spacebar*/) {
+      this.accessibilitySwitch();
+    }
   }
 
   constructor(private location: Location, private router: Router) {
