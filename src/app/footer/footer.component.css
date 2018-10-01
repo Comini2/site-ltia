@@ -29,9 +29,14 @@
     }
 }
 
+.ltia-technology {
+    margin-left: 20px; 
+}
+
 .footer {
     display: flex;
     color: #535353;
+    background-color: white;
 }
 
 .footer-content {

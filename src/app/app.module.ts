@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { LtiaCarouselComponent } from './home/ltia-carousel/ltia-carousel.component';
 import { LtiaCarouselItemComponent } from './home/ltia-carousel/ltia-carousel-item/ltia-carousel-item.component';
 import { MenuComponent } from './menu/menu.component';
+import {UnderhomeComponent} from './underhome/underhome.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { LocationComponent } from './location/location.component';
@@ -45,7 +46,8 @@ import { AcessibilityService } from './acessibility.service';
     OutlineItemComponent,
     TeamComponent,
     OutlineItemTeamComponent,
-    AccessibilityComponent
+    AccessibilityComponent,
+    UnderhomeComponent
   ],
   imports: [
     BrowserModule,

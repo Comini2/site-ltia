@@ -15,8 +15,8 @@ export class TeamComponent implements OnInit {
    /***************** Acessibility Scripts ***************/
    aOn = {
      'font-size' : '30px',
-     'background-color' : 'white',
-     'color' : 'black'
+     'background-color' : '#88ccda',
+     'color' : 'black',
      'padding' : '10px',
      'font-weight' : 'bold'
     };

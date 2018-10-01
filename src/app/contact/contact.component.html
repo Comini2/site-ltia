@@ -1,18 +1,18 @@
 <div class="main">
     <div class="container">
-      <span class="contact-text">_ENTRE EM CONTATO</span>
+      <span class="contact-text" [ngStyle]='getAccessibilityState()? aOn : null'>_ENTRE EM CONTATO</span>
       <form (ngSubmit)="onSubmit()" [formGroup]="reactiveForm" class="contact-form">
-        <p class="form-label">Nome </p>
+        <p class="form-label" [ngStyle]='getAccessibilityState()? aOn : null'>Nome </p>
         <input type="text" class="form-input" formControlName="name" required autocomplete="name"/>
-        <p class="form-label" >E-mail</p>
+        <p class="form-label" [ngStyle]='getAccessibilityState()? aOn : null'>E-mail</p>
         <input type="email" class="form-input" formControlName="email" required autocomplete="email"/>
-        <p class="form-label">Assunto</p>
+        <p class="form-label" [ngStyle]='getAccessibilityState()? aOn : null'>Assunto</p>
         <input class="form-input" formControlName="subject"/>
-        <p class="form-label">Digite aqui sua mensagem</p>
+        <p class="form-label" [ngStyle]='getAccessibilityState()? aOn : null'>Digite aqui sua mensagem</p>
         <textarea class="form-input" formControlName="message" rows="10" required></textarea>
         <div class="captcha">
           <re-captcha siteKey="6LdqyFoUAAAAAM5bTcDtvw4h-aoZH9h-NgqxLldA" formControlName="recaptchaReactive"></re-captcha>
-          <button type="submit" [disabled]="reactiveForm.invalid">Enviar</button>
+          <button type="submit" [disabled]="reactiveForm.invalid [ngStyle]='getAccessibilityState()? aOn : null'">Enviar</button>
         </div>
       </form>
     </div>

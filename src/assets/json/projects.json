@@ -98,5 +98,58 @@
             "tools": [],
             "status" : "Concluído"
         }
+    },
+    {
+        "name": "Punhos de Urna",
+        "imgUrl": "assets/img/project/punhosdeurna.png",
+        "info":{
+            "members":["Heitor Queiroz", "Robson Junior", "Matheus Peixoto", "Christian Dutra", "Pedro Lamkowski", "Isabela Saullo", "Rhuan Esborini"],
+            "desc":"Punhos de Urna é um Beat em' up, que se passa numa hiper-realidade da política brasileira.",
+            "tools":["Unity", "Photoshop", "Illustrator", "Fruit Loops studio", "Audittion"],
+            "status": "Em andamento"
+        }
+    },
+    {
+        "name": "Space Tilter",
+        "imgUrl": "assets/img/project/spacetilter.png",
+        "info":{
+            "members":["Fernanda Mayumi","Gabi Balceskis","João Milone","João Victor Correa", "Ricardo Milhim"],
+            "desc": "Jogo com tematica espacial para mobile",
+            "tools":["Unity", "Photoshop", "Fruit Loops studio"],
+            "status": "Em andamento"
+        }
+    },
+    {
+        "name": "Jogo Educativo de Astronomia",
+        "imgUrl": "assets/img/project/astro.png",
+        "info":{
+            "members":["João Milone","João Victor Correa", "Ricardo Milhim","Thais Cruz"],
+            "desc": "Jogo para auxilio de professores que ensinam sobre o nosso Sistema Solar.",
+            "tools":["Unity", "Photoshop"],
+            "status": "Em andamento"
+        }
+    },
+    {
+        "name": "Mahomori",
+        "imgUrl": "assets/img/project/mahomori.png",
+        "info":{
+            "members":["Gabriela Airi Akyama", "Rodrigo Constante Capitelli", "Rocco de Oliveira Cavenaghi"],
+            "desc": "Jogo desenvolvido em RPG Maker MV que visa ter um desenvolvimento rápido, contando a história de uma garota que entra em um mundo fantasioso.",
+            "tools":["RPG Maker MV","Fruit Loops Studio", "Photoshop", "Audition"],
+            "status": "Em andamento"
+        }
+    },
+    {
+        "name": "Carta Anonima",
+        "imgUrl": "assets/img/project/carta.png",
+        "info":{
+            "members":["Ana Massa","Bárbara Este","Gustavo Ferasoli","João Milone", "Matheus Melo", "Pedro Lamkowski"],
+            "desc": "Site para mulheres compartilharem experiências traumáticas de violência que presenciaram ou vivenciaram, de maneira completamente anônima.",
+            "tools":["Illustrator","Figma", "Photoshop", "HTML/CSS","Bootstrap", "PHP", "MySQL", "Javascript"],
+            "status": "Em andamento"
+        }
     }
+    
+    
+    
 ]

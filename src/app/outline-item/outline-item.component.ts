@@ -10,7 +10,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     trigger('fadeIn', [
       state('false', style({opacity: 0, transform: 'translateX(100%)'})),
       state('true', style({ opacity: 1, transform: 'translateX(0%)'})),
-      transition('false => true', animate('0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55)'))
+      transition('false => true', animate('0.75s ease-out'))
     ])
   ]
 })

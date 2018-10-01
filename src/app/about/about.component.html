@@ -1,6 +1,6 @@
 <div class="main">
   <div class="container">
-    <span class="about-text">_SOBRE</span>
+    <span class="about-text" [ngStyle]='getAccessibilityState()? aOn : null'>_SOBRE</span>
 
     <div class="row about-img">
       <div class="col-11 col-md-12 center-block">
@@ -10,7 +10,7 @@
 
     <div class="row">
       <div class="col-10 col-md-12 center-block">
-        <div class="info-text ident-text">
+        <div class="info-text ident-text" [ngStyle]='getAccessibilityState()? aOn : null'>
           Idealizado pelo Prof. Dr. Eduardo Martins Morgado e fundado em 1995, 
           o Laboratório de Tecnologia da Informação Aplicada - LTIA foi criado com o intuito de promover, 
           à alunos de graduação e mestrado, um ambiente semelhante ao encontrado no mercado de trabalho,
@@ -36,20 +36,20 @@
     <div class="row">
       <div class="col-10 col-md-12 center-block">
         <div class="info-text">
-          <div class="ident-text">
+          <div class="ident-text" [ngStyle]='getAccessibilityState()? aOn : null'>
             Ao trazer para a graduação uma experiência semelhante à vivenciada pelos profissionais no mercado, com o porém de valorizar a liberdade para desenvolver os mais variados projetos na área de tecnologia, a filosofia adotada no LTIA visa incentivar a pró-atividade, o aprendizado, a propagação do conhecimento, o trabalho em equipe, o aperfeiçoamento das habilidades técnicas e o comprometimento com os projetos desenvolvidos.
           </div>
-          <div class="ident-text">
+          <div class="ident-text" [ngStyle]='getAccessibilityState()? aOn : null'>
           Graças à essa abordagem e a um time cheio de pessoas talentosas e extremamente dedicadas, já realizamos diversos projetos em parceria com grandes empresas como Motorola, Amazon, Intel e Microsoft. Em meio a projetos grandes e pequenos, sempre buscamos fazer o nosso melhor para que nossas ações impactem o mundo ao nosso redor de maneira positiva e sucessiva.          
           </div>
-          <div class="ident-text">
+          <div class="ident-text" [ngStyle]='getAccessibilityState()? aOn : null'>
           Atualmente, dividimos os projetos em grandes áreas: Aplicativos e Sistemas, Internet das Coisas (IoT), Objetos de Aprendizagem e Games (abordando, atualmente, as áreas de Realidade Aumentada e Realidade Virtual). As equipes são divididas de acordo com os projetos dentro destas grandes áreas e também de acordo com o interesse de cada membro, para que todos se sintam motivados e comprometidos com o projeto que estão desenvolvendo.            
           </div>
         </div>
       </div>
     </div>
     
-    <span class="world-ltia-text" id="no-mundo">LTIA NO MUNDO</span>
+    <span class="world-ltia-text" id="no-mundo" [ngStyle]='getAccessibilityState()? aOn : null'>_LTIA NO MUNDO</span>
 
     <div class="row about-img">
       <div class="col-11 col-md-12 center-block">
@@ -64,7 +64,7 @@
     <div class="row">
       <div class="col-10 col-md-12 center-block">
         <div class="info-text">
-          <div class="ident-text">
+          <div class="ident-text last-text" [ngStyle]='getAccessibilityState()? aOn : null'>
             Apresentamos a seguir todas as equipes do LTIA que conseguiram se classificar para as finais nacionais e mundiais de competições.
             Foram nove participações nos dez anos em que a Imagine Cup utilizou um formato de competição no qual se podia competir diretamente em uma Categoria Mundial.
             Nesse caso, nossas equipes disputaram diretamente contra equipes do mundo todo, desde as primeiras etapas eliminatórias.
@@ -100,7 +100,7 @@
     <div class="row">
       <div class="col-10 col-md-12 center-block">
         <div class="info-text">
-          <div class="ident-text">
+          <div class="ident-text" [ngStyle]='getAccessibilityState()? aOn : null'>
             Sinta-se à vontade para conhecer nossos projetos, nossa equipe, curta nossa página no Facebook, siga-nos no Instagram e acompanhe nossos projetos no GitHub e Behance!
           </div>
         </div>

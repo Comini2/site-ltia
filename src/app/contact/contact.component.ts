@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { AcessibilityService } from '../acessibility.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,14 +10,27 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ContactComponent implements OnInit {
   reactiveForm: FormGroup;
-  
-  private awsUrl : string = "https://9d593x2gqa.execute-api.us-west-2.amazonaws.com/prod/sendEmail";
+  private awsUrl: any = "https://9d593x2gqa.execute-api.us-west-2.amazonaws.com/prod/sendEmail";
 
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json'
     })
   };
+  /***************** Acessibility Scripts ***************/
+  aOn = {
+    'font-size' : '30px',
+    'background-color' : '#88ccda',
+    'color' : 'black',
+    'padding' : '10px',
+    'font-weight' : 'bold'
+   };
+
+  getAccessibilityState() {
+    return AcessibilityService.accessibilityIsOn;
+  }
+
+  /********************************************************/
 
   constructor(private httpClient : HttpClient) { }
 
@@ -42,7 +56,8 @@ export class ContactComponent implements OnInit {
       console.log(res);
     }, (err) => {
       console.log(err);
-    })
+    });
   }
+
 
 }

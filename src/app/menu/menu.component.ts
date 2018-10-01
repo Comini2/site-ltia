@@ -37,14 +37,14 @@ export class MenuComponent implements OnInit {
 
 
   pages = [
-    { path: 'about', text: 'Sobre' },
-    { path: 'about', fragment: 'no-mundo', text: 'LTIA no mundo' },
-    { path: 'projects', text: 'Projetos' },
+    { path: 'about', text: '_Sobre' },
+    { path: 'about', fragment: 'no-mundo', text: '_LTIA no mundo' },
+    { path: 'projects', text: '_Projetos' },
     // { path: '', text: 'Cursos' },
-    { path: 'team', text: 'Equipe' },
-    { path: 'location', text: 'Local'},
-    { path: 'contact', text: 'Contato'},
-    { path: 'accessibility', text: 'Acessibilidade'}
+    { path: 'team', text: '_Equipe' },
+    { path: 'location', text: '_Local'},
+    { path: 'contact', text: '_Contato'},
+    { path: 'accessibility', text: '_Acessibilidade'}
   ];
 
   setPagesStyle() {

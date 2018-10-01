@@ -20,7 +20,9 @@ export class LtiaCarouselComponent implements AfterViewInit {
   private player : AnimationPlayer;
   timeout: any;
 
-  constructor(private cdRef:ChangeDetectorRef, private builder: AnimationBuilder, private router:Router) {
+  //*********** hammer *******/
+
+  constructor(private cdRef:ChangeDetectorRef, private builder: AnimationBuilder, private router: Router) {
     router.events.subscribe((val) =>{
       if(val instanceof NavigationStart)
         clearTimeout(this.timeout);
@@ -41,6 +43,14 @@ export class LtiaCarouselComponent implements AfterViewInit {
     });
     this.cdRef.detectChanges();
   }
+
+  swipedUp() {
+    console.log("Up!");
+  }
+
+  downClick = function () {
+    this.router.navigateByUrl('/user');
+};
 
   load(index: number){
     this.items.forEach((item, i) => {

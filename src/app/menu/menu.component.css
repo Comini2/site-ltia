@@ -137,7 +137,13 @@ input#menu{
     width: 250px;
     color: white;
     z-index: 998;
-    padding-top: 130px;
+    padding-top: 150px;
+}
+
+@media only screen and (max-width: 768px) {
+    .lateral-bar {
+        padding-top: 90px; 
+    }
 }
 
 .lateral-bar ul {

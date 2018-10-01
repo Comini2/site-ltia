@@ -8,12 +8,13 @@ import { ProjectComponent } from './project/project.component';
 import { ProjectInfoComponent } from './project-info/project-info.component';
 import { TeamComponent } from './team/team.component';
 import { AccessibilityComponent } from './accessibility/accessibility.component';
+import {UnderhomeComponent} from './underhome/underhome.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    data: {state : ''}
+    data: {state : 'home'}
   },
   {
     path: 'about',
@@ -54,6 +55,11 @@ const routes: Routes = [
     path: 'accessibility',
     component: AccessibilityComponent,
     data: {state : ''}
+  },
+  {
+    path: 'underhome',
+    component: UnderhomeComponent,
+    data: {state: 'underhome'}
   }
 ];
 

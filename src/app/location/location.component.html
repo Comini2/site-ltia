@@ -1,6 +1,6 @@
 <div class="main">
   <div class="container">
-    <span class="about-text">_LOCAL</span>
+    <span class="about-text" [ngStyle]="getAccessibilityState()? aOn : null">_LOCAL</span>
 
     <div class="row">
       <div class="col-11 col-md-12 center-block about-img map-md">
@@ -15,7 +15,7 @@
 
     
 
-    <div class="center-text">
+    <div class="center-text" [ngStyle]="getAccessibilityState()? aOn : null">
       Av. Engenheiro Edmundo Carrijo Coube, 14-01<br>
       Prédio LTIA<br>
       Vargem Limpa, Bauru - SP<br>

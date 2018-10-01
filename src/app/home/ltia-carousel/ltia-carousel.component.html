@@ -1,8 +1,9 @@
-<div #main class="carousel-main" [style.width.%]="totalSize">
+<div #main class="carousel-main" [style.width.%]="totalSize" id="myElement" (swipeup)="swipedUp()">
   <ng-content></ng-content>
 </div>
 <div class="carousel-right-arrow" (click)="showNext()"></div>
 <div class="carousel-left-arrow" (click)="showPrev()"></div>
+<a routerLink="/underhome"><div class="carousel-down-arrow"  id="down-arrow"></div></a>
 <div class="carousel-bullets-container">
     <div class="carousel-bullets">
       <div *ngFor = "let item of items; let i = index" [class.active]="i === currentIndex" class="carousel-bullet"></div>

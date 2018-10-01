@@ -13,8 +13,9 @@
     }
 
     span.world-ltia-text {
-        font-size: 35px;
+        font-size: 25px;
         line-height: 41px;
+        padding-bottom: 15px;
     }
 }
 
@@ -51,6 +52,16 @@
     width: 100%;
     z-index: 1;
     color: white;
+    padding-bottom: 90px; 
+}
+
+.world-ltia-text {
+    display: block;
+    margin-left: auto;
+    text-align: center;
+    padding-top: 30px; 
+    padding-bottom: 15px;
+    font-size: 10px; 
 }
 
 .main .container {
@@ -74,7 +85,7 @@
 }
 
 .world-ltia-text {
-    font-size: 48px;
+    font-size: 30px;
     line-height: 56px;
     margin-right: auto;
     margin-top: 15px;
@@ -82,7 +93,12 @@
 
 .ident-text {
     text-indent: 2em;
-    text-align: justify;
+    text-align: left;
+
+}
+
+.last-text {
+    padding-bottom: 15px;
 }
 
 .info-text > .ident-text {
@@ -91,6 +107,7 @@
 
 .buttons-container {
     display: flex;
+    padding-bottom: 15px;
 }
 .button {
     text-align: center;
@@ -141,5 +158,7 @@
     width: 50%;
     margin-top: 15px;
 }
+
+
 
 

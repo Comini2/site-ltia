@@ -32,7 +32,33 @@ import { trigger, transition, query, style, animate, group, stagger } from '@ang
             animate('0.5s ease-in-out', style({ transform: 'translateX(100%)' }))
           ], { optional: true })
         ])
-      ])
+      ]),
+      transition('home => underhome', [
+        query(':enter, :leave', style({position: 'absolute', height: '100%', width: '100%'}), {optional: true}),
+          group([
+            query(':enter', [
+              style({ transform: 'translateY(100%)' }),
+              animate('0.5s ease-in-out', style({ transform: 'translateY(0%)' }))
+            ], { optional: true }),
+            query(':leave', [
+              style({ transform: 'translateY(0%)' }),
+              animate('0.5s ease-in-out', style({ transform: 'translateY(-100%)' }))
+            ], { optional: true })
+          ])
+        ]),
+        transition('underhome => home', [
+          query(':enter, :leave', style({position: 'absolute', height: '100%', width: '100%'}), {optional: true}),
+            group([
+              query(':enter', [
+                style({ transform: 'translateY(-100%)' }),
+                animate('0.5s ease-in-out', style({ transform: 'translateY(0%)' }))
+              ], { optional: true }),
+              query(':leave', [
+                style({ transform: 'translateY(0%)' }),
+                animate('0.5s ease-in-out', style({ transform: 'translateY(100%)' }))
+              ], { optional: true })
+            ])
+          ])
   ])]
 })
 export class AppComponent {

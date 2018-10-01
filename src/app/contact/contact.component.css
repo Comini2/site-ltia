@@ -24,6 +24,7 @@
     width: 100%;
     z-index: 1;
     color: white;
+    padding-bottom: 30px;
 }
 
 .contact-text {
@@ -64,8 +65,8 @@
 }
 
 .captcha button:disabled {
-    background-color: transparent;
-    border: 1px solid white;
+    background-color: white;
+    border: 2px solid #c9c9c9;
     color: #c9c9c9;
     align-self: center;
     font-weight: 100;
@@ -73,13 +74,14 @@
 } 
 
 .captcha button {
-    background-color: transparent;
+    background-color: white;
     border: 1px solid white;
-    color: white;
+    color: transparent;
     align-self: center;
     font-weight: bold;
     padding: 5px 10px;
     cursor: pointer;
     width: 100px;
 }
+
 

@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AcessibilityService } from '../acessibility.service';
 
 @Component({
-  selector: 'app-accessibility',
-  templateUrl: './accessibility.component.html',
-  styleUrls: ['./accessibility.component.css'],
+  selector: 'app-underhome',
+  templateUrl: './underhome.component.html',
+  styleUrls: ['./underhome.component.css'],
 })
-export class AccessibilityComponent {
+export class UnderhomeComponent {
 
   /***************** Acessibility Scripts ***************/
   aOn = {

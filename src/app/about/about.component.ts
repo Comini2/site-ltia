@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit} from '@angular/core';
 import { JsonService } from '../json.service';
 import { trigger, transition, query, style, animate, stagger } from '@angular/animations';
 import {Router, NavigationEnd } from '@angular/router';
+import { AcessibilityService } from '../acessibility.service';
 
 @Component({
   selector: 'app-about',
@@ -17,6 +18,21 @@ import {Router, NavigationEnd } from '@angular/router';
   ]
 })
 export class AboutComponent implements AfterViewInit, OnInit {
+
+    /***************** Acessibility Scripts ***************/
+    aOn = {
+      'font-size' : '30px',
+      'background-color' : '#88ccda',
+      'color' : 'black',
+      'padding' : '10px',
+      'font-weight' : 'bold'
+     };
+  
+    getAccessibilityState() {
+      return AcessibilityService.accessibilityIsOn;
+    }
+  
+    /********************************************************/
 
   participations: any;
   selectedParticipation: any;

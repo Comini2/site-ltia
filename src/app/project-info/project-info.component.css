@@ -1,3 +1,7 @@
+.selected-project-item {
+    font-size: 13px;
+}
+
 @media(max-width: 1200px){
     div.selected-project-item {
         flex-basis: 100%;
